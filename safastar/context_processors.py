@@ -1,7 +1,8 @@
 from brands.models import *
 from product.models import *
-
+from home.models import *
 def navbar(request):
     brandsitems = brandsitem.objects.all()
     product = products.objects.all()
-    return {'brandsitem': brandsitems,"product":product}
+    adss = ads.objects.order_by('?').first()
+    return {'brandsitem': brandsitems,"product":product,'adss':adss}

@@ -1,6 +1,7 @@
 from django.db import models
 from ckeditor.fields import RichTextField 
 from django.utils.text import slugify
+from django.utils import timezone
 # Create your models here.
 
 
@@ -30,7 +31,16 @@ class brandcontact(models.Model):
     phono = models.CharField(("Phone Number"), max_length=250)
     brand = models.ForeignKey("brandsitem", verbose_name=("Product/Brand name"), on_delete=models.CASCADE)
     msg = RichTextField()
+    date = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
         return self.name
     
+
+class brandfaq(models.Model):
+    brand = models.ForeignKey("brandsitem", verbose_name=("Brand"), on_delete=models.CASCADE)
+    question = models.TextField(("Question"))
+    answer = models.TextField(("Answer"))  
+
+    def __str__(self):
+        return f'{self.brand} {self.question}'

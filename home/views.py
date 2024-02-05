@@ -1,5 +1,8 @@
 from django.shortcuts import render
 from blog.models import Blogpost
+from django.contrib import messages
+from django.http import HttpResponseRedirect
+from .models import *
 # Create your views here.
 
 
@@ -18,4 +21,16 @@ def aboutcompany(request):
 
 
 def Contactus(request):
+    storage = messages.get_messages(request)
+    storage.used = True
+    if request.method == "POST":
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        Phone = request.POST.get('Phone')
+        message = request.POST.get('message')
+        if name and email and Phone and message:
+            contact.objects.create(name=name,email=email,phono=Phone,msg=message)
+            messages.success(request, 'Request Submited')
+            current_url = request.build_absolute_uri()
+            return HttpResponseRedirect(current_url)
     return render(request,'contactus.html')

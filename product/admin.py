@@ -10,4 +10,11 @@ class CoursesDetailsAdmin(admin.ModelAdmin):
     inlines = [productiteminline]
 
 
-admin.site.register(productcontact)
+class contactmodel(admin.ModelAdmin):
+     list_display = ('name', 'phono', 'product','date')
+     list_filter = ('product',)
+     search_fields = ('name', 'product')
+
+
+
+admin.site.register(productcontact,contactmodel)

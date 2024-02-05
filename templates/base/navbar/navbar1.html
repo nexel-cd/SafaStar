@@ -6,9 +6,9 @@
                 <div class="col-lg-8">
                     <div class="top__bar-three-left lg-t-center">
 						<ul>
-							<li><a href="https://maps.app.goo.gl/m4fpJN6D6bYNsssY8" target="_blank"><i class="fas fa-map-marker-alt"></i>Location : P.O Box 46780 – Deira, Dubai, UAE</a></li>
-							<li><a href="tel:+971 56 505 33 40 "><i class="fas fa-phone-alt"></i>+971 56 505 33 40 </a></li>
-						</ul>                        
+							<li><a href="tel:+971 56 505 33 40"><i class="fas fa-phone-alt"></i>Phone : +971 56 505 33 40</a></li>
+							<li><a href="mailto:sales@thesafastar.com"><i class="fas fa-envelope"></i>Email : sales@thesafastar.com</a></li>
+						</ul>                       
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -40,14 +40,14 @@
                             <ul id="mobilemenu">
                                 <li class="menu-item"><a href="/">Home</a></li>
                                 <li class="menu-item"><a href="{% url "about" %}">About Us</a></li>
-                                <li class="menu-item-has-children"><a href="#">Brands</a>
+                                <li class="menu-item-has-children"><a href="{% url "allbrands" %}">Brands</a>
                                     <ul class="sub-menu">
                                         {% for brandsitem in brandsitem %}
                                         <li><a href="{% url "brandsview" brandsitem.slug %}">{{brandsitem.brand}}</a></li>
                                         {% endfor %}
                                     </ul>
                                 </li>
-                                <li class="menu-item-has-children"><a href="#">Products</a>
+                                <li class="menu-item-has-children"><a href="">Products</a>
                                     <ul class="sub-menu">
                                         {% for product in product %}
                                         <li><a href="{% url "productviews" product.slug %}">{{product.name}}</a></li>

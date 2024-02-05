@@ -83,7 +83,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="blog__details-pagination">
+                        {% comment %} <div class="blog__details-pagination">
                             <div class="blog__details-pagination-item">
                                 <a href="single-right-sidebar.html">
                                     <div class="blog__details-pagination-item-left dark__image">
@@ -109,7 +109,7 @@
                                     </div>
                                 </a>
                             </div>
-                        </div>
+                        </div> {% endcomment %}
                         {% comment %} <div class="blog__details-left-comment mt-65">
 							<h4 class="mb-30">Comments (2)</h4>
 							<div class="blog__details-left-comment-item">
@@ -216,7 +216,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="all__sidebar-item-help" data-background="{% static "assets/img/pages/support.jpg" %}">
+                        <div class="all__sidebar-item-help" data-background="{{adss.img.url}}">
 							<img class="all__sidebar-item-help-shape" src="{% static "assets/img/shape/support.png" %}" alt="">
                             <h4>Request a Free Call in Today !</h4>
                             <div class="all__sidebar-item-help-contact">

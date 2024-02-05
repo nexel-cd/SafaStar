@@ -1,9 +1,11 @@
-    <!-- Footer Area Start -->
-	<div class="footer__three" data-background="assets/img/shape/footer-bg-3.png">
+    {% load static %}
+	
+	<!-- Footer Area Start -->
+	<div class="footer__three" data-background="{% static "assets/img/shape/footer-bg-3.png" %}">
 		<!-- Subscribe Area Start -->
 		<div class="subscribe__three">
 			<div class="container">
-				<div class="row align-items-center subscribe__three-bg" data-background="assets/img/pages/subscribe.jpg">
+				<div class="row align-items-center subscribe__three-bg" >
 					<div class="col-xl-6">
 						<div class="subscribe__three-left">
 							<h2>Act today for Industry Excellence</h2>
@@ -11,12 +13,12 @@
 					</div>
 					<div class="col-xl-6">
                         <div class="subscribe__three-right">
-                            <a class="btn-one" href="request-quote.html">Quote Now</a>
+                            <a class="btn-one" href="{% url "Contactus" %}">Contact US</a>
                             <div class="subscribe__three-right-contact">
                                 <i class="flaticon-phone-call"></i>
                                 <div class="subscribe__three-right-contact-info">
                                     <span>Make a call</span>
-                                    <h6><a href="tel:(303)555-0105">+971 56 505 33 40</a></h6>
+                                    <h6><a href="tel:+971 56 505 33 40">+971 56 505 33 40</a></h6>
                                 </div>
                             </div>
                         </div>
@@ -29,9 +31,9 @@
 			<div class="row">
 				<div class="col-xl-4 col-lg-5 col-md-6">
 					<div class="footer__three-widget">
-						<h4>Company</h4>
+						<h4>SafaStar</h4>
                         <div class="footer__three-widget-company">
-                            <p>Aenean ac commodo lacus. Sed dictum nulla arcu, non rhoncus dolor mollis ut. Vivamus nec leo dictum,</p>
+                            <p>Established in 2000, Safa Star strategically positioned itself in Dubai, recognizing the city's pivotal role in global trade between the Middle East, Asia, and Africa.</p>
                             <form action="#">
                                 <input type="text" name="email" placeholder="Email Address" required="">
                                 <button type="submit"><i class="fas fa-paper-plane"></i></button>
@@ -41,14 +43,12 @@
 				</div>
 				<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
 					<div class="footer__three-widget">
-						<h4>Our Services</h4>
+						<h4>Our Products</h4>
 						<div class="footer__area-widget-menu three">
                             <ul>
-								<li><a href="services-right-sidebar.html">Health Insurance</a></li>
-								<li><a href="services-right-sidebar.html">Car Insurance</a></li>
-								<li><a href="services-right-sidebar.html">Home Insurance</a></li>
-								<li><a href="services-right-sidebar.html">Health Insurance</a></li>
-								<li><a href="services-right-sidebar.html">Farm Insurance</a></li>
+								{% for product in product %}
+                                <li><a href="{% url "productviews" product.slug %}">{{product.name}}</a></li>
+                                {% endfor %}
 							</ul>
 						</div>
 					</div>
@@ -59,12 +59,11 @@
 						<div class="footer__three-widget-info">
 							<div class="footer__three-widget-info-item">
                                 <h6>Phone :</h6>
-                                <a href="tel:+023(676)586565">+023 (676) 586 565</a>
-                                <a href="tel:+023(568)586658">+023 (568) 586 658</a>
+                                <a href="tel:+023(676)586565">+971 56 505 33 40</a>
 							</div>
 							<div class="footer__three-widget-info-item">
                                 <h6>Gmail :</h6>
-                                <a href="mailto:info.help@gmail.com">info.help@gmail.com</a>
+                                <a href="mailto:sales@thesafastar.com">sales@thesafastar.com</a>
 							</div>
 						</div>
 					</div>
@@ -74,11 +73,10 @@
 						<h4>Resources</h4>
 						<div class="footer__area-widget-menu three">
                             <ul>
-								<li><a href="about.html">About Us</a></li>
-								<li><a href="blog-grid-three.html">Blog</a></li>
-								<li><a href="testimonial.html">Testimonials</a></li>
-								<li><a href="faq.html">Faqs</a></li>
-								<li><a href="contact-two.html">Contact Us</a></li>
+								<li><a href="{% url "about" %}">About Us</a></li>
+								<li><a href="{% url "allblogs" %}">Blog</a></li>
+								<li><a href="{% url "allbrands" %}">All Brands</a></li>
+								<li><a href="{% url "Contactus" %}">Contact Us</a></li>
 							</ul>
 						</div>
 					</div>

@@ -1,0 +1,53 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block body %}
+{% include "base\navbar\navbar2.html" %}	
+    
+<!-- Page Banner Area Start -->
+<div class="page__banner">
+    <div class="page__banner-image" data-background="{% static "assets/img/banner/page-banner.jpg" %}"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="page__banner-content">
+                    <h1>Our Brands</h1>
+                    <ul>
+                        <li><a href="/">Home</a><span>|</span></li>
+                        <li>Our Brands</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    
+<!-- Page Banner Area End -->
+<!-- Services Area Start -->
+<div class="services__page section-padding">
+    <div class="container">
+        <div class="row">
+            {% for brands in brands %}
+            <div class="col-lg-4 col-md-6 mb-30">
+                <div class="services__one-item m-0">
+                    <div class="services__one-item-image">
+                        <img src="{{brands.img1.url}}" alt="liability-insurance">
+                    </div>
+                    <div class="services__one-item-content">
+                        {% comment %} <div class="services__one-item-content-icon">
+                            <i class="flaticon-insurance"></i>
+                        </div> {% endcomment %}
+                        <h4 style="text-align:center;"><a href="{% url "brandsview" brands.slug %}">{{brands.brand}}</a></h4>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            
+        </div>
+    </div>
+</div>
+<!-- Services Area End -->
+
+
+
+
+    
+{% endblock body %}
