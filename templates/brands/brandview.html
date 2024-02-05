@@ -1,0 +1,148 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block body %}
+{% include "base\navbar\navbar2.html" %}	
+    
+    
+    
+ {% for brands in brands %}  
+    <!-- Page Banner Area Start -->
+    <div class="page__banner">
+		<div class="page__banner-image" data-background="{% static "assets/img/banner/page-banner.jpg" %}"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-12">
+					<div class="page__banner-content">
+						<h1>{{brands.brand}} Products In Dubai, UAE</h1>
+						<ul>
+							<li><a href="{% url "home" %}">Home</a><span>|</span></li>
+							<li>Brands</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>    
+	<!-- Page Banner Area End -->
+	<!-- Services Details Start -->
+    <div class="services__details section-padding">
+        <div class="container">
+            <div class="row">
+				<div class="col-xl-8 col-lg-8 lg-mb-50">
+					<div class="services__details-left">
+						<div class="services__details-left-image mb-30 dark__image">
+							<img class="img__full" src="{{brands.img1.url}}" alt="service-details-image">
+						</div>
+						<div class="services__details-left-content">
+							<h2>About {{brands.brand}} Products in Dubai, UAE</h2>
+                            <p> {{brands.des1|safe}} </p>
+                            <span class="services__details-left-content-box">{{brands.quote|safe}}</span>
+							<p>{{brands.des2|safe}}</p>
+                            <div class="row align-items-center mt-35 mb-35">
+                                <div class="col-xl-6 col-lg-12 xl-mb-30 dark__image">
+                                    <img class="img__full" src="{{brands.img2.url}}" alt="service-image">
+                                </div>
+                                <div class="col-xl-6 col-lg-12">
+                                    <h3 class="mb-10">Customer Benefits</h3>
+                                    <p>{{brands.benefits|safe}}</p>     
+                                    
+                                </div>
+                            </div>
+						</div>
+                        <div class="faq__area" id="accordionExample">
+                            <div class="faq__area-item">
+                                <h6 class="icon page collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne">What Mobil products are available in Dubai?</h6>
+                                <div id="collapseOne" class="faq__area-item-body collapse" data-bs-parent="#accordionExample">
+                                    <p>Explore our range of Mobil lubricants for automotive, industrial, and marine applications, along with specialty products tailored to specific machinery needs.</p>
+                                </div>
+                            </div>
+                            <div class="faq__area-item">
+                                <h6 class="icon page" data-bs-toggle="collapse" data-bs-target="#collapseTwo">Are Mobil products in Dubai compliant with industry standards?</h6>                                    
+                                <div id="collapseTwo" class="faq__area-item-body collapse show" data-bs-parent="#accordionExample">
+                                    <p>Yes, Mobil products meet or exceed industry standards for quality, performance, and environmental sustainability, ensuring reliability and peace of mind.</p>
+                                </div>
+                            </div>
+                            <div class="faq__area-item">
+                                <h6 class="icon page collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree">How do I find the right Mobil product for my application in Dubai?</h6>
+                                <div id="collapseThree" class="faq__area-item-body collapse" data-bs-parent="#accordionExample">
+                                    <p>Our experts are here to help! Contact us for personalized recommendations and guidance to optimize your operations with Mobil products in Dubai.</p>
+                                </div>
+                            </div>
+                        </div>   
+					</div>
+				</div>
+                <div class="col-xl-4 col-lg-4">
+                    <div class="all__sidebar">
+                        <div class="all__sidebar-item">
+                            <h4>Get Instant Quotation On {{brands.brand}} Products</h4>
+                            <div class="all__sidebar-item-solution">
+                                <form action="#">
+                                    <div class="row">
+                                        <div class="col-md-12 mb-10">
+                                            <div class="contact__two-right-form-item contact-item">
+                                                <span class="fal fa-user"></span>
+                                                <input type="text" name="name" placeholder="Full Name" required="required">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 mb-10">
+                                            <div class="contact__two-right-form-item contact-item">
+                                                <span class="far fa-envelope-open"></span>
+                                                <input type="email" name="email" placeholder="Email Address" required="required">											
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 mb-10">
+                                            <div class="contact__two-right-form-item contact-item">
+                                                <span class="fal fa-phone"></span>
+                                                <input type="tel" name="Phone" placeholder="Phone Number with Country code">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 mb-10">
+                                            <div class="contact__two-right-form-item contact-item">
+                                                <span class="fal fa-product"></span>
+                                                <input type="text" name="Product" placeholder="Product/Brand Name">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 mb-10">
+                                            <div class="contact__two-right-form-item contact-item">
+                                                <span class="far fa-comments"></span>
+                                                <textarea name="message" placeholder="Message"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="contact__two-right-form-item">
+                                                <button class="btn-one" type="submit">Send </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="all__sidebar-item">
+                            <h4>Company Profile</h4>
+                            <div class="all__sidebar-item-download">
+                                <ul>
+                                    <li><a href=""><div><i class="flaticon-pdf"></i>Download File</div><span class="fal fa-arrow-to-bottom"></span></a></li>
+                                    <li><a href=""><div><i class="flaticon-pdf-file"></i>Download Pdf</div><span class="fal fa-arrow-to-bottom"></span></a></li>
+                                </ul>                            
+                            </div>
+                        </div>
+                        <div class="all__sidebar-item-help" data-background="{% static "assets/img/pages/support.jpg" %}">
+							<img class="all__sidebar-item-help-shape" src="{% static "assets/img/shape/support.png" %}" alt="">
+                            <h4>Request a Free Call in Today !</h4>
+                            <div class="all__sidebar-item-help-contact">
+                                <i class="flaticon-phone-call"></i>
+                                <div class="all__sidebar-item-help-contact-content">
+                                    <span>Quick Help</span>
+                                    <h6><a href="tel:+125(895)658568">+125 (895) 658 568</a></h6>
+                                </div>
+                            </div>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- Services Details End -->    
+
+	{% endfor %} 
+    {% endblock body %}

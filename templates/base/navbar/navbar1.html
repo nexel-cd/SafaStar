@@ -1,0 +1,188 @@
+{% load static %}
+    <!-- Header Area Start -->
+    <div class="top__header header__sticky three">
+        <div class="custom__container">
+            <div class="row align-items-center top__bar-three">
+                <div class="col-lg-8">
+                    <div class="top__bar-three-left lg-t-center">
+						<ul>
+							<li><a href="https://maps.app.goo.gl/m4fpJN6D6bYNsssY8" target="_blank"><i class="fas fa-map-marker-alt"></i>Location : P.O Box 46780 – Deira, Dubai, UAE</a></li>
+							<li><a href="tel:+971 56 505 33 40 "><i class="fas fa-phone-alt"></i>+971 56 505 33 40 </a></li>
+						</ul>                        
+                    </div>
+                </div>
+                <div class="col-lg-4">
+					<div class="top__bar-three-right">
+						<div class="top__bar-three-right-social">
+							<ul>
+								<li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i><span>Facebook</span></a></li>
+								<li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i><span>Instagram</span></a></li>
+								<li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i><span>Twitter</span></a></li>
+								<li><a href="https://dribbble.com" target="_blank"><i class="fab fa-dribbble"></i><span>Dribbble</span></a></li>
+							</ul>
+						</div>
+					</div>
+                </div>                    
+            </div>
+        </div>
+        <div class="custom__container">
+            <div class="top__header-bg p-relative">
+                <div class="row align-items-center">
+                    <div class="col-xl-3 col-lg-3 col-6">
+                        <div class="header__area-menubar-left">
+                            <div class="header__area-menubar-left-logo three">
+                                <a href="index.html"><img src="{% static "assets\img\images\logo.png" %}" alt="Logo-image"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-7 col-1">
+                        <div class="header__area-menubar-center-menu three menu-responsive">						
+                            <ul id="mobilemenu">
+                                <li class="menu-item"><a href="/">Home</a></li>
+                                <li class="menu-item"><a href="{% url "about" %}">About Us</a></li>
+                                <li class="menu-item-has-children"><a href="#">Brands</a>
+                                    <ul class="sub-menu">
+                                        {% for brandsitem in brandsitem %}
+                                        <li><a href="{% url "brandsview" brandsitem.slug %}">{{brandsitem.brand}}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children"><a href="#">Products</a>
+                                    <ul class="sub-menu">
+                                        {% for product in product %}
+                                        <li><a href="{% url "productviews" product.slug %}">{{product.name}}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+                                <li class="menu-item"><a href="{% url "allblogs" %}">Blog</a>
+                                </li>
+                                <li class="menu-item"><a href="{% url "Contactus" %}">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-2 col-5">	
+                        <div class="header__area-menubar-right three">
+                            <div class="header__area-menubar-right-search three">
+                            </div>
+                            <div class="header__area-menubar-right-sidebar">
+                                <div class="header__area-menubar-right-sidebar-popup-icon"><i class="flaticon-dots-menu"></i></div>
+                            </div>
+                            <div class="header__area-menubar-right-contact three">
+                                <div class="header__area-menubar-right-contact-icon">
+                                    <i class="flaticon-phone-call"></i>
+                                </div>
+                                <div class="header__area-menubar-right-contact-info">
+                                    <span>Free contact 24/7</span>
+                                    <h6><a href="tel:+971 56 505 33 40 ">+971 56 505 33 40 </a></h6>
+                                </div>
+                            </div>
+                            <div class="header__area-menubar-right-responsive-menu menu__bar">
+                                <i class="flaticon-dots-menu"></i>
+                            </div>
+                               <!-- sidebar Menu Start -->
+                            <div class="header__area-menubar-right-sidebar-popup three">
+                                <div class="sidebar-close-btn"><i class="fal fa-times"></i></div>
+                                <div class="header__area-menubar-right-sidebar-popup-logo">
+                                    <a href="index.html"> <img src="{% static "assets\img\images\logo.png" %}" alt="Logo-image"> </a>
+                                </div>
+                                <p>Established in 2000, Safa Star strategically positioned itself in Dubai, recognizing the city's pivotal role in global trade between the Middle East, Asia, and Africa.</p>
+                                <div class="header__area-menubar-right-sidebar-popup-contact">
+                                    <h4 class="mb-30">Get In Touch</h4>
+                                    <div class="header__area-menubar-right-sidebar-popup-contact-item">
+                                        <div class="header__area-menubar-right-sidebar-popup-contact-item-icon">
+                                            <i class="fal fa-phone-alt icon-animation"></i>
+                                        </div>
+                                        <div class="header__area-menubar-right-sidebar-popup-contact-item-content">
+                                            <span>Call Now</span>
+                                            <h6><a href="tel:+125(895)658568">+125 (895) 658 568</a></h6>
+                                        </div>
+                                    </div>
+                                    <div class="header__area-menubar-right-sidebar-popup-contact-item">
+                                        <div class="header__area-menubar-right-sidebar-popup-contact-item-icon">
+                                            <i class="fal fa-envelope"></i>
+                                        </div>
+                                        <div class="header__area-menubar-right-sidebar-popup-contact-item-content">
+                                            <span>Quick Email</span>
+                                            <h6><a href="mailto:info.help@gmail.com">info.help@gmail.com</a></h6>
+                                        </div>
+                                    </div>
+                                    <div class="header__area-menubar-right-sidebar-popup-contact-item">
+                                        <div class="header__area-menubar-right-sidebar-popup-contact-item-icon">
+                                            <i class="fal fa-map-marker-alt"></i>
+                                        </div>
+                                        <div class="header__area-menubar-right-sidebar-popup-contact-item-content">
+                                            <span>Office Address</span>
+                                            <h6><a href="https://www.google.com/maps" target="_blank">PV3M+X68 Welshpool United Kingdom</a></h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="header__area-menubar-right-sidebar-popup-social">
+                                    <ul>
+                                        <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="https://www.behance.net" target="_blank"><i class="fab fa-behance"></i></a></li>
+                                        <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                                    </ul>							
+                                </div>
+                            </div>
+                            <div class="sidebar-overlay"></div>
+                            <!-- sidebar Menu Start -->
+                        </div>
+                        <div class="menu__bar-popup three">
+                            <div class="menu__bar-popup-close"><i class="fal fa-times"></i></div>
+                            <div class="menu__bar-popup-left">
+                                <div class="menu__bar-popup-left-logo">
+                                    <a href="index.html"><img src="assets/img/logo-6.png" alt="logo-image"></a>
+                                    <div class="responsive-menu"></div>
+                                </div>
+                                <div class="menu__bar-popup-left-social">
+                                    <h6>Follow Us</h6>
+                                    <ul>
+                                        <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="https://dribbble.com" target="_blank"><i class="fab fa-dribbble"></i></a></li>							
+                                        <li><a href="https://www.behance.net" target="_blank"><i class="fab fa-behance"></i></a></li>
+                                        <li><a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li><a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></li>							
+                                    </ul>						
+                                </div>
+                            </div>
+                            <div class="menu__bar-popup-right">
+                                <div class="menu__bar-popup-right-search">
+                                    <form>
+                                        <input type="search" placeholder="Search Here....." required>
+                                        <button type="submit"><i class="fal fa-search"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                                <div class="menu__bar-popup-right-contact">
+                                    <h4>Get In Touch</h4>
+                                    <div class="menu__bar-popup-right-contact-item">
+                                        <div class="menu__bar-popup-right-contact-item-info">
+                                            <span>Call Now</span>
+                                            <h6><a href="tel:+125(895)658568">+125 (895) 658 568</a></h6>
+                                        </div>
+                                    </div>
+                                    <div class="menu__bar-popup-right-contact-item">
+                                        <div class="menu__bar-popup-right-contact-item-info">
+                                            <span>Quick Email</span>
+                                            <h6><a href="mailto:info.help@gmail.com">info.help@gmail.com</a></h6>
+                                        </div>
+                                    </div>
+                                    <div class="menu__bar-popup-right-contact-item">
+                                        <div class="menu__bar-popup-right-contact-item-info">
+                                            <span>Office Address</span>
+                                            <h6><a href="https://www.google.com/maps" target="_blank">PV3M+X68 Welshpool United Kingdom</a></h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>			
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>        
+    </div>
+    <!-- Header Area End -->

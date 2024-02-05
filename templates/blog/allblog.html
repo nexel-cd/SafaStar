@@ -1,0 +1,79 @@
+
+{% extends "base/base.html" %}
+{% load static %}
+{% block body %}
+{% include "base\navbar\navbar2.html" %}	
+<!-- Page Banner Area Start -->
+<div class="page__banner">
+    <div class="page__banner-image" data-background="{% static "assets/img/banner/page-banner.jpg" %}"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="page__banner-content">
+                    <h1>Blogs</h1>
+                    <ul>
+                        <li><a href="/">Home</a><span>|</span></li>
+                        <li>All Blogs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    
+<!-- Page Banner Area End -->
+<!-- Blog Area Start -->
+<div class="blog__two-page section-padding">
+    <div class="container">
+        <div class="row">
+
+            {% for blogs in blogs %}
+            <div class="col-xl-4 col-lg-6 mb-30">
+                <div class="blog__two-item">
+                    <div class="blog__two-item-image">
+                        <a href="{% url "blogdetails" blogs.slug %}"><img src="{{blogs.img1.url}}" alt="liability-insurance"></a>
+                    </div>
+                    <div class="blog__two-item-content">
+                        <div class="blog__two-item-content-date">
+                            <h3>{{blogs.created_date.day}}</h3>
+                            <p>{{blogs.created_date|date:"F"}}</p>
+                        </div>
+                        <span>{{ blogs.categories.first.name }}</span>
+                        <h4><a href="{% url "blogdetails" blogs.slug %}">{{blogs.title}}</a></h4>
+                        <div class="blog__two-item-content-author">
+                            <div class="blog__two-item-content-author-post">
+                                <div class="blog__two-item-content-author-post-image">
+                                    <img src="{% static "assets/img/images/avatar/avatar.png" %}" alt="avatar-image">
+                                </div>
+                                <div class="blog__two-item-content-author-post-title">
+                                    <span>Posted By</span>
+                                    <h6>{{blogs.author}}</h6>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="blog__two-item-btn">
+                        <a href="{% url "blogdetails" blogs.slug %}">Read More<i class="far fa-long-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+                      
+        </div>
+        {% comment %} <div class="row mt-80 t-center">
+            <div class="col-xl-12">
+                <div class="theme__pagination">
+                    <ul>
+                        <li><a class="active" href="#">01</a></li>
+                        <li><a href="#">02</a></li>
+                        <li><a href="#"><i class="far fa-ellipsis-h"></i></a></li>
+                        <li><a href="#">05</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-double-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>                
+        </div> {% endcomment %}
+    </div>
+</div>
+<!-- Blog Area End -->
+{% endblock body %}

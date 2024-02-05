@@ -1,0 +1,123 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Start Meta -->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Noxiy - Insurance Company HTML Template">
+	<meta name="keywords" content="Creative, Digital, multipage, landing, freelancer template">
+	<meta name="author" content="ThemeOri">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Title of Site -->
+	<title>Noxiy - Insurance Company HTML Template</title>
+	<!-- Favicons -->
+	<link rel="icon" type="image/png" href="assets/img/favicon-3.png">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+	<!-- Font Awesome CSS -->
+	<link rel="stylesheet" href="{% static 'assets/css/all.css' %}">
+	<!-- Animate CSS -->
+	<link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+	<!-- Flaticon -->
+	<link rel="stylesheet" href="{% static 'assets/font/flaticon.css' %}">	
+	<!-- Swiper Bundle CSS -->
+	<link rel="stylesheet" href="{% static 'assets/css/swiper-bundle.min.css' %}">
+	<!-- Magnific Popup CSS -->
+	<link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+	<!-- Mean Menu CSS -->
+	<link rel="stylesheet" href="{% static 'assets/css/meanmenu.min.css' %}">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="{% static 'assets/sass/style.css' %}"> 
+</head>
+
+<body>
+
+
+    {% include "base/preloader.html" %}
+    {% block body %}{% endblock body %}
+	
+
+        
+    
+	<!-- Scroll Btn Start -->
+	<div class="scroll-up scroll-three">
+		<svg class="scroll-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102"><path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" /> </svg>
+	</div>
+
+
+    {% include "base\footer\footer.html" %}
+
+    <!-- WhatsApp Button Start -->
+    <script>
+        var url = 'https://wati-integration-prod-service.clare.ai/v2/watiWidget.js?76423';
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = url;
+        var options = {
+        "enabled":true,
+        "chatButtonSetting":{
+            "backgroundColor":"#00e785",
+            "ctaText":"Chat with us",
+            "borderRadius":"25",
+            "marginLeft": "0",
+            "marginRight": "20",
+            "marginBottom": "20",
+            "ctaIconWATI":false,
+            "position":"left"
+        },
+        "brandSetting":{
+            "brandName":"Wati",
+            "brandSubTitle":"undefined",
+            "brandImg":"https://www.wati.io/wp-content/uploads/2023/04/Wati-logo.svg",
+            "welcomeText":"Hi there!\nHow can I help you?",
+            "messageText":"",
+            "backgroundColor":"#00e785",
+            "ctaText":"Chat with us",
+            "borderRadius":"25",
+            "autoShow":true,
+            "phoneNumber":"971565053340"
+        }
+        };
+        s.onload = function() {
+            CreateWhatsappChatWidget(options);
+        };
+        var x = document.getElementsByTagName('script')[0];
+        x.parentNode.insertBefore(s, x);
+    </script>
+
+
+
+    <!-- WhatsApp Button End -->
+
+
+
+
+	<!-- Scroll Btn End -->	
+	<!-- Main JS -->
+	<script src="{% static 'assets/js/jquery-3.7.0.min.js' %}"></script>
+	<!-- Bootstrap JS -->
+	<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+	<!-- Counter Up JS -->
+	<script src="{% static 'assets/js/jquery.counterup.min.js' %}"></script>
+	<!-- Popper JS -->
+	<script src="{% static 'assets/js/popper.min.js' %}"></script>
+	<!-- Progressbar JS -->
+	<script src="{% static 'assets/js/progressbar.min.js' %}"></script>
+	<!-- Magnific Popup JS -->
+	<script src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
+	<!-- Swiper Bundle JS -->
+	<script src="{% static 'assets/js/swiper-bundle.min.js' %}"></script>
+    <!-- Isotope JS -->
+	<script src="{% static 'assets/js/isotope.pkgd.min.js' %}"></script>
+	<!-- Waypoints JS -->
+	<script src="{% static 'assets/js/jquery.waypoints.min.js' %}"></script>
+	<!-- Mean Menu JS -->
+	<script src="{% static 'assets/js/jquery.meanmenu.min.js' %}"></script>
+	<!-- Custom JS -->
+	<script src="{% static 'assets/js/custom.js' %}"></script>
+</body>
+</html>

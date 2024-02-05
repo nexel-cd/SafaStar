@@ -1,0 +1,133 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block body %}
+{% include "base\navbar\navbar2.html" %}
+
+
+    {% for product in product %}
+
+    <!-- Page Banner Area Start -->
+    <div class="page__banner">
+		<div class="page__banner-image" data-background="{% static "assets/img/banner/page-banner.jpg" %}"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-12">
+					<div class="page__banner-content">
+						<h1>{{product.name}}</h1>
+						<ul>
+							<li><a href="{% url "home" %}">Home</a><span>|</span></li>
+							<li>{{product.name}}</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>    
+	<!-- Page Banner Area End -->
+	<!-- Project Single Area Start -->
+	<div class="project__single section-padding">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-12">
+					<div class="project__single-image mb-60 dark__image">
+						<img src="{{product.img.url}}" alt="project-image">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-8 lg-mb-30">
+					<div class="project__single-area">
+						<div class="project__single-area-content">
+							<h2>About {{product.name}}</h2>
+							<p>{{product.des|safe}}</p>
+						</div>
+                        <br>
+                        <div class="row">
+                            {% for x in productitems %}
+                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                <div class="project__one-item">
+                                    <img class="img__full" src="{{x.img.url}}" alt="renters-insurance">
+                                    <div class="project__one-item-content">
+                                        <span>{{x.product}}</span>
+                                        <h4><a href="{% url "brandsview" x.brand.slug %}">{{x.brand}}</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                           
+                        </div>
+						
+                        
+					</div>					
+				</div>
+				<div class="col-lg-4">
+                    <div class="all__sidebar">
+                        
+                        <div class="all__sidebar-item">
+                            <h4>Get Instant Quotation On {{product.name}}</h4>
+                            <div class="all__sidebar-item-solution">
+                                <form action="#">
+                                    <div class="row">
+                                        <div class="col-md-12 mb-10">
+                                            <div class="contact__two-right-form-item contact-item">
+                                                <span class="fal fa-user"></span>
+                                                <input type="text" name="name" placeholder="Full Name" required="required">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 mb-10">
+                                            <div class="contact__two-right-form-item contact-item">
+                                                <span class="far fa-envelope-open"></span>
+                                                <input type="email" name="email" placeholder="Email Address" required="required">											
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 mb-10">
+                                            <div class="contact__two-right-form-item contact-item">
+                                                <span class="fal fa-phone"></span>
+                                                <input type="tel" name="Phone" placeholder="Phone Number with Country code">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 mb-10">
+                                            <div class="contact__two-right-form-item contact-item">
+                                                <span class="fal fa-product"></span>
+                                                <input type="text" name="Product" placeholder="Product/Brand Name">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 mb-10">
+                                            <div class="contact__two-right-form-item contact-item">
+                                                <span class="far fa-comments"></span>
+                                                <textarea name="message" placeholder="Message"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="contact__two-right-form-item">
+                                                <button class="btn-one" type="submit">Send </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+				
+                        <div class="all__sidebar-item-help" data-background="{% static "assets/img/pages/support.jpg" %}">
+							<img class="all__sidebar-item-help-shape" src="{% static "assets/img/shape/support.png" %}" alt="">
+                            <h4>Request a Free Call in Today !</h4>
+                            <div class="all__sidebar-item-help-contact">
+                                <i class="flaticon-phone-call"></i>
+                                <div class="all__sidebar-item-help-contact-content">
+                                    <span>Quick Help</span>
+                                    <h6><a href="tel:+125(895)658568">+125 (895) 658 568</a></h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Project Single Area End -->
+
+
+    {% endfor %}
+
+    {% endblock body %}

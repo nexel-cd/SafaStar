@@ -1,0 +1,237 @@
+
+
+{% extends "base/base.html" %}
+{% load static %}
+{% block body %}
+{% include "base\navbar\navbar2.html" %}	
+
+
+
+{% for blogdetail in blogdetail %}
+	<!-- Page Banner Area Start -->
+    <div class="page__banner">
+		<div class="page__banner-image" data-background="{% static "assets/img/banner/page-banner.jpg" %}"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-12">
+					<div class="page__banner-content">
+						<h1>{{blogdetail.title}}</h1>
+						<ul>
+							<li><a href="index.html">Home</a><span>|</span></li>
+							<li>Blogs</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>    
+	<!-- Page Banner Area End -->
+
+
+    <!-- Blog Details Area Start -->
+    <div class="blog__details section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 col-lg-8 lg-mb-50">
+                    <div class="blog__details-left">
+						<div class="dark__image">							
+							<img class="img__full" src="{{blogdetail.img1.url}}" alt="blog-details-image">
+						</div>
+                        <div class="blog__details-left-meta">
+                            <ul>
+                                <li><a href="single-right-sidebar.html"><i class="far fa-user"></i>By-{{blogdetail.author}}</a></li>
+                           
+                            </ul>
+                        </div>
+						<h3 class="mb-20">{{blogdetail.title}}</h3>
+                        <p>{{blogdetail.content|safe}}</p>
+                        <div class="blog__details-left-box">
+							<p>{{blogdetail.quote}}</p>
+                            <h6>{{blogdetail.author}}</h6>                                
+                            <span>Author</span>
+                        </div>
+                        
+                        <div class="row mt-35 mb-30">
+                            <div class="col-sm-6 sm-mb-30 dark__image">
+                                <img class="img__full" src="{{blogdetail.img2.url}}" alt="blog-details-image">
+                            </div>
+                            <div class="col-sm-6 dark__image">
+                                <img class="img__full" src="{{blogdetail.img3.url}}" alt="blog-details-image">
+                            </div>
+                        </div>
+                        <h3 class="mb-20">Our Working System</h3>
+                        <p>Fusce justo felis, lobortis quis mauris eget, fermentum venenatis ex. Mauris convallis ultricies lectus nec ultrices. Etiam non elit dui. Sed facilisis quam in risus dapibus rutrum. Nullam bibendum hendrerit tortor sed sollicitudin. Sed vel mollis justo. Donec luctus molestie faucibus. Cras auctor vestibulum felis sed fermentum. </p>
+                        <div class="row mt-45 mb-60">
+                            <div class="col-md-8 md-mb-15">
+                                <div class="blog__details-left-tag">
+                                    <h6>Tag:</h6>
+                                    <ul>
+                                        {% for tag in blogdetail.tags.all %}
+                                        <li><a >{{tag.name}}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="blog__details-left-share">
+                                    <h6>Share:</h6>
+                                    <ul>
+                                        <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="https://www.behance.net" target="_blank"><i class="fab fa-behance"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog__details-pagination">
+                            <div class="blog__details-pagination-item">
+                                <a href="single-right-sidebar.html">
+                                    <div class="blog__details-pagination-item-left dark__image">
+                                        <img src="assets/img/blog/post-3.jpg" alt="post-image">
+                                        <div class="blog__details-pagination-item-content">
+                                            <h6>Previous Post</h6>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="blog__details-pagination-item center">
+                                <div class="blog__details-pagination-item-icon">
+                                    <i class="flaticon-dots-menu"></i>
+                                </div>
+                            </div>
+                            <div class="blog__details-pagination-item">
+                                <a href="single-right-sidebar.html">
+                                    <div class="blog__details-pagination-item-left dark__image">
+                                        <div class="blog__details-pagination-item-content t-right">
+                                            <h6>Next Post</h6>
+                                        </div>
+                                        <img src="assets/img/blog/post-1.jpg" alt="post-image">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        {% comment %} <div class="blog__details-left-comment mt-65">
+							<h4 class="mb-30">Comments (2)</h4>
+							<div class="blog__details-left-comment-item">
+								<div class="blog__details-left-comment-item-comment">
+									<div class="blog__details-left-comment-item-comment-image">
+										<img src="assets/img/avatar/avatar-9.jpg" alt="avaatar-image">									
+									</div>									
+									<div class="blog__details-left-comment-item-comment-content">
+										<h6>Guy Hawkins<a href="single-right-sidebar.html"><i class="far fa-reply-all"></i>Reply</a></h6>
+										<span>20 Dec, 2023  At 9:PM</span>
+                                        <p>Pellentesque a placerat orci. Suspendisse rutrum lacus ipsum, eu vulputate augue blandit mollis.</p>
+                                    </div>
+								</div>
+							</div>
+							<div class="blog__details-left-comment-item ml-65 sm-ml-0">
+								<div class="blog__details-left-comment-item-comment">
+									<div class="blog__details-left-comment-item-comment-image">
+										<img src="assets/img/avatar/avatar-10.jpg" alt="avaatar-image">									
+									</div>									
+									<div class="blog__details-left-comment-item-comment-content">
+										<h6>Kristin Watson<a href="single-right-sidebar.html"><i class="far fa-reply-all"></i>Reply</a></h6>
+										<span>22 Dec, 2023  At 7:PM</span>
+                                        <p>Pellentesque a placerat orci. Suspendisse rutrum lacus ipsum, eu vulputate augue blandit mollis.</p>
+									</div>
+								</div>
+							</div>
+						</div> {% endcomment %}
+                        {% comment %} <div class="blog__details-left-contact mt-65">
+							<h4 class="mb-30">Leave a reply</h4>
+                            <div class="blog__details-left-contact-form">
+                                <form action="#">	
+                                    <div class="row">
+                                        <div class="col-sm-6 mb-30"> 
+                                            <div class="blog__details-left-contact-form-item contact-item">
+                                                <span class="fal fa-user"></span>
+                                                <input type="text" name="name" placeholder="Full Name" required="required">
+                                            </div>										
+                                        </div>
+                                        <div class="col-sm-6 sm-mb-30">
+                                            <div class="blog__details-left-contact-form-item contact-item">
+                                                <span class="fal fa-envelope"></span>
+                                                <input type="text" name="email" placeholder="Email Address" required="required">											
+                                            </div>									
+                                        </div>
+                                        <div class="col-sm-12 mb-30"> 
+                                            <div class="blog__details-left-contact-form-item contact-item">
+                                                <span class="fal fa-globe"></span>
+                                                <input type="text" value="https://" required="required">
+                                            </div>										
+                                        </div>
+                                        <div class="col-sm-12 mb-30"> 
+                                            <div class="blog__details-left-contact-form-item contact-item">
+                                                <span class="fal fa-pen"></span>
+                                                <textarea name="message" placeholder="Type your comments...."></textarea>
+                                            </div>										
+                                        </div>
+                                        <div class="col-lg-12">										
+                                            <div class="blog__details-left-contact-form-item">
+                                                <button class="btn-one" type="submit">Submit Comment</button>
+                                            </div>										
+                                        </div>
+                                    </div>							
+                                </form>	
+                            </div>						
+						</div>                         {% endcomment %}
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4">
+                    <div class="all__sidebar">
+                        
+                        <div class="all__sidebar-item">
+                            <h4>Our Brands</h4>
+                            <div class="all__sidebar-item-solution">
+                                <ul>
+                                    {% for brandsitem in brandsitem %}
+                                    <li><a href="{% url "brandsview" brandsitem.slug %}">{{brandsitem.brand}}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="all__sidebar-item">
+                            <h4>Recent Post</h4>
+                            <div class="all__sidebar-item-post">
+                                {% for blogs in blogs %}
+                                <div class="post__item">
+                                    <div class="post__item-image">
+                                        <a href="{% url "blogdetails" blogs.slug %}"><img src="{{blogs.img1.url}}" alt="post-image"></a>
+                                    </div>
+                                    <div class="post__item-title">
+                                        <h6><a href="{% url "blogdetails" blogs.slug %}">{{blogs.title|slice:40}}...</a></h6>
+                                        <span><i class="far fa-calendar-alt"></i>{{blogs.created_date}}</span>
+                                    </div>
+                                </div>                           
+                                {% endfor %}                
+                            </div>
+                        </div>
+                        <div class="all__sidebar-item">
+                            <h4>Popular Tag</h4>
+                            <div class="all__sidebar-item-tag">
+                                <ul>
+                                    {% for tags in tags %}
+                                    <li><a >{{tags.name}}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="all__sidebar-item-help" data-background="{% static "assets/img/pages/support.jpg" %}">
+							<img class="all__sidebar-item-help-shape" src="{% static "assets/img/shape/support.png" %}" alt="">
+                            <h4>Request a Free Call in Today !</h4>
+                            <div class="all__sidebar-item-help-contact">
+                                <i class="flaticon-phone-call"></i>
+                                <div class="all__sidebar-item-help-contact-content">
+                                    <span>Quick Help</span>
+                                    <h6><a href="tel:+125(895)658568">+125 (895) 658 568</a></h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog Details Area End -->
+    {% endfor %}
+    {% endblock body %}

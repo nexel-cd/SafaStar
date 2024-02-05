@@ -1,0 +1,421 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block body %}
+{% include "base\navbar\navbar1.html" %}
+	
+	<!-- Banner Area Start -->
+	<div class="banner__three swiper banner-slider">
+		<div class="swiper-wrapper">
+			<div class="banner__three-image swiper-slide" data-background="{% static "assets/img/banner/banner-5.png" %}">
+                <img class="banner__three-shape" src="{% static "assets/img/shape/banner-4.png" %}" alt="banner-shape">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-12">
+							<div class="banner__three-content">
+								<span data-animation="fadeInUp" data-delay=".3s">The Safa Star</span>
+								<h1 data-animation="fadeInUp" data-delay=".6s" style="color: black;">Innovate Empower Excel.</h1>
+								<p data-animation="fadeInUp" data-delay=".9s" style="color: black;">Leading the Industry with Quality Oils & Chemicals WorldWide.</p>
+								<div class="banner__three-content-button" data-animation="fadeInUp" data-delay="1.2s">
+                                    <a class="btn-one" href="about.html">Discover More</a>
+                                </div>
+                                <div class="banner-pagination"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="banner__three-image swiper-slide" data-background="{% static "assets/img/banner/banner-6.png" %}">	
+                <img class="banner__three-shape" src="{% static "assets/img/shape/banner-4.png" %}" alt="banner-shape">			
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-12">
+							<div class="banner__three-content">
+								<span data-animation="fadeInUp" data-delay=".3s">The Safa Star</span>
+								<h1 data-animation="fadeInUp" data-delay=".6s" style="color: black;">Innovate Empower Excel.</h1>
+								<p data-animation="fadeInUp" data-delay=".9s" style="color: black;">Leading the Industry with Quality Oils & Chemicals WorldWide.</p>
+								<div class="banner__three-content-button" data-animation="fadeInUp" data-delay="1.2s">
+                                    <a class="btn-one" href="about.html">Discover More</a>
+                                </div>
+                                <div class="banner-pagination"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Banner Area Start -->
+	<!-- About Area Start -->
+	<div class="about__three section-padding">
+        <img class="about__three-shape" src="{% static "assets/img/shape/about-4.png" %}" alt="about-shape">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-xl-7 col-lg-6 lg-mb-30">
+					<div class="about__three-left">
+                        <img class="about__three-left-shape dark-n" src="{% static "assets/img/shape/about-3.png" %}" alt="about-image">
+                        <img class="about__three-left-shape light-n" src="{% static "assets/img/shape/about-3-dark.png" %}" alt="about-image">
+						<div class="about__three-left-image">
+                            <div class="image-overlay dark__image">
+                                <img src="{% static "assets\img\images\about-4.png" %}" alt="about-image">
+                            </div>
+							<div class="about__three-left-image-experience" data-background="{% static "assets/img/shape/experience.png" %}">
+								<h1><span class="counter">10</span>+</h1>
+								<h5>Years Of Experience</h5>
+                                <p>Experience that delivers every time.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-5 col-lg-6">
+					<div class="about__three-right">
+						<div class="about__three-right-title">
+							<span class="subtitle-three">Leading Provider</span>
+							<h2>Your partner for Unrivaled Solutions</h2>
+                            <p>Leading Provider where innovation meets reliability - Elevating your Standards Everytime.</p>
+						</div>
+                        <div class="about__three-right-list">
+                            <div class="about__three-right-list-item">
+                                <div class="about__three-right-list-item-icon">
+                                    <i class="flaticon-mission"></i>
+                                </div>
+                                <div class="about__three-right-list-item-content">
+                                    <h4>Our Company Mission</h4>
+                                    <p>We deliver superior products & unmateched service ensuiring safety, efficiency & sustainability globally</p>
+                                </div>
+                            </div>
+                            <div class="about__three-right-list-item">
+                                <div class="about__three-right-list-item-icon">
+                                    <i class="flaticon-vision"></i>
+                                </div>
+                                <div class="about__three-right-list-item-content">
+                                    <h4>Our Company Vision</h4>
+                                    <p>Safa Star envisions excellence & innovation shaping the future of the Industries</p>
+                                </div>
+                            </div>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- About Area End -->
+
+    <!-- Brands Carousel Start -->
+
+    <section class="mt-4 container ftco-animate">
+        <div class="heading-section ftco-animate text-center">
+          <h2 class="mb-4  text-dark">We Are Suppliers Of</h2>
+      
+        </div>
+        <style>
+          .carousel {
+            overflow: hidden;
+            width: 100%;
+          }
+      
+          .carousel-container {
+            display: flex;
+            width: 600%; /* 4 images, each taking up 100% of the width */
+            animation: scroll 20s infinite linear; /* scroll for 20 seconds and repeat infinitely */
+            animation-delay: 2s; /* delay animation by 2 seconds for a more attractive effect */
+          }
+      
+          .carousel-container img {
+            height: 200px;
+            width: 200px; /* each image takes up 1/4 of the container */
+            margin-right: 20px; /* add space between the images */
+            object-fit: cover; /* scale images to fit their containers */
+            transition: transform 0.5s ease-out; /* add a smooth transition effect when images change */
+          }
+      
+          .carousel-container img:last-of-type {
+            margin-right: 0; /* remove right margin from last image */
+          }
+          .carousel-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0; /* hide the overlay by default */
+            background-color: rgba(0, 0, 0, 0.5); /* add a semi-transparent background */
+            transition: opacity 0.5s ease-out; /* add a smooth transition effect */
+          }
+          .carousel:hover .carousel-overlay {
+            opacity: 1; /* show the overlay when the mouse hovers over the carousel */
+          }
+      
+          @keyframes scroll {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-10%); /* move container 3x the width of one image */
+            }
+          }
+      
+        </style>
+        <script>
+          const carousel = document.querySelector('.carousel');
+      const container = document.querySelector('.carousel-container');
+      
+      carousel.addEventListener('mouseover', () => {
+        container.style.animationPlayState = 'paused'; /* pause the animation */
+      });
+      
+      carousel.addEventListener('mouseout', () => {
+        container.style.animationPlayState = 'running'; /* resume the animation */
+      });
+        </script>
+        <div class="carousel ftco-animate">
+          <div class="carousel-container">
+            <img src="https://i.ibb.co/BBrgfMM/St-lawrence.png">
+            <img src="https://i.ibb.co/4YfDQxr/2.png" alt="">
+            <img src="https://i.ibb.co/hMRdGvM/3.png" alt="">
+            <img src="https://i.ibb.co/bKn15SZ/4.png" alt="">
+            <img src="https://i.ibb.co/8rFmZQk/5.png" alt="">
+            <img src="https://i.ibb.co/2nxmj4r/7.png" alt="">
+            <img src="https://i.ibb.co/2gZb5Lz/8.png" alt="">
+            <img src="https://i.ibb.co/DrCCS2C/9.png" alt="">
+            <img src="https://i.ibb.co/vhKTCZ2/10.png" alt="">
+            <img src="https://i.ibb.co/LvgF2sN/11.png" alt="">
+            <img src="https://i.ibb.co/FBgFzQH/12.png" alt="">
+            <img src="https://i.ibb.co/5M2wBWm/13.png" alt="">
+            <img src="https://i.ibb.co/z8nQNvG/6.png" alt="">
+            <img src="https://i.ibb.co/hdYJMyf/1.png">
+            <img src="https://i.ibb.co/4YfDQxr/2.png" alt="">
+            <img src="https://i.ibb.co/hMRdGvM/3.png" alt="">
+            <img src="https://i.ibb.co/bKn15SZ/4.png" alt="">
+            <img src="https://i.ibb.co/8rFmZQk/5.png" alt="">
+            <img src="https://i.ibb.co/2nxmj4r/7.png" alt="">
+            <img src="https://i.ibb.co/2gZb5Lz/8.png" alt="">
+            <img src="https://i.ibb.co/DrCCS2C/9.png" alt="">
+            <img src="https://i.ibb.co/vhKTCZ2/10.png" alt="">
+            <img src="https://i.ibb.co/LvgF2sN/11.png" alt="">
+            <img src="https://i.ibb.co/FBgFzQH/12.png" alt="">
+            <img src="https://i.ibb.co/5M2wBWm/13.png" alt="">
+            <img src="https://i.ibb.co/z8nQNvG/6.png" alt="">
+          </div>
+        </div>
+      </section>
+
+
+
+    <!-- Brands Carousel End -->
+
+
+
+
+    <!-- Portfolio Area Start -->
+    <div class="portfolio__three section-padding">
+        <div class="container">
+            <div class="row mb-60">
+                <div class="col-xl-12">
+                    <div class="portfolio__three-title t-center">
+                        <span class="subtitle-three">Our Products</span>
+                        <h2>Our Premium Products</h2>                         
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio">
+            {% for product in product %}
+            <div class="portfolio__three-item">
+                <img src="{{product.img.url}}" alt="car-insurance">
+                <div class="portfolio__three-item-content vertical">
+                    <div>
+                        <span>Premium Products</span>
+                        <h4><a href="{% url "productviews" product.slug %}">{{product.name}}</a></h4>
+                    </div>
+                    <div class="portfolio__three-item-content-icon vertical">
+                        <a href="{% url "productviews" product.slug %}"><i class="flaticon-right-up"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio__three-item-content transition">
+                    <div>
+                        <span>Premium Products</span>
+                        <h4><a href="{% url "productviews" product.slug %}">{{product.name}}</a></h4>
+                    </div>
+                    <div class="portfolio__three-item-content-icon">
+                        <a href="{% url "productviews" product.slug %}"><i class="flaticon-right-up"></i></a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% comment %} <div class="portfolio__three-item">
+                <img src="{% static "assets/img/portfolio/industry-chemicals.png" %}" alt="flood-insurance">
+                <div class="portfolio__three-item-content vertical">
+                    <div>
+                        <span>Premium Products</span>
+                        <h4><a href="project-single.html">Industry Chemicals</a></h4>
+                    </div>
+                    <div class="portfolio__three-item-content-icon vertical">
+                        <a href="project-single.html"><i class="flaticon-right-up"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio__three-item-content transition">
+                    <div>
+                        <span>Premium Products</span>
+                        <h4><a href="project-single.html">Industry Chemicals</a></h4>
+                    </div>
+                    <div class="portfolio__three-item-content-icon">
+                        <a href="project-single.html"><i class="flaticon-right-up"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio__three-item ">
+                <img src="{% static "assets/img/portfolio/safety-products.png" %}" alt="house-insurance">
+                <div class="portfolio__three-item-content vertical">
+                    <div>
+                        <span>Premium Products</span>
+                        <h4><a href="project-single.html">Safety Products</a></h4>
+                    </div>
+                    <div class="portfolio__three-item-content-icon vertical">
+                        <a href="project-single.html"><i class="flaticon-right-up"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio__three-item-content transition">
+                    <div>
+                        <span>Premium Products</span>
+                        <h4><a href="project-single.html">Safety Products</a></h4>
+                    </div>
+                    <div class="portfolio__three-item-content-icon">
+                        <a href="project-single.html"><i class="flaticon-right-up"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio__three-item">
+                <img src="{% static "assets/img/portfolio/building-materials.png" %}" alt="homeowner-insurance">
+                <div class="portfolio__three-item-content vertical">
+                    <div>
+                        <span>Premium Products</span>
+                        <h4><a href="project-single.html">Building Materials</a></h4>
+                    </div>
+                    <div class="portfolio__three-item-content-icon vertical">
+                        <a href="project-single.html"><i class="flaticon-right-up"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio__three-item-content transition">
+                    <div>
+                        <span>Premium Products</span>
+                        <h4><a href="project-single.html">Building Materials</a></h4>
+                    </div>
+                    <div class="portfolio__three-item-content-icon">
+                        <a href="project-single.html"><i class="flaticon-right-up"></i></a>
+                    </div>
+                </div>
+            </div> {% endcomment %}
+        </div>  
+    </div>  
+    <!-- Portfolio Area End -->
+
+	<!-- Cta Area Start -->
+	<div class="cta__area" data-background="{% static "assets/img/shape/cta.png" %}">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-xl-6 col-lg-8 lg-mb-20">
+					<div class="cta__area-title lg-t-center">
+						<h2>Elevate your Industry Standards Today</h2>
+					</div>
+				</div>
+				<div class="col-xl-6 col-lg-4">
+					<div class="cta__area-btn t-right lg-t-center">
+						<a class="btn-two" href="request-quote.html">Get Connected</a>						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Cta Area End -->
+	<!-- Faq Area Start -->
+    <div class="faq__one section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xxl-7 col-lg-6 lg-mb-30">
+                    <div class="faq__one-left">
+                        <div class="faq__one-left-image">
+                            <div class="image-overlay">
+                                <img src="{% static "assets/img/pages/faq-1.png" %}" alt="faq-image">
+                            </div>
+                            <div class="image-overlay faq__one-left-image-one">
+                                <img src="{% static "assets/img/pages/faq-2.png" %}" alt="faq-image">
+                            </div>
+                            <div class="faq__one-left-image-question left-right-animate">
+                                <div class="faq__one-left-image-question-icon">
+                                    <i class="flaticon-question-mark-1"></i>
+                                </div>
+                                <h6>Have any questions?</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xxl-5 col-lg-6">
+                    <div class="faq__one-right">
+                        <div class="faq__one-right-title">
+                            <span class="subtitle-three">Faq Questions</span>
+                            <h2>Answer's for Seamless Solutions</h2>
+                        </div>
+                        <div class="faq__area" id="accordionExample">
+                            <div class="faq__area-item">
+                                <h6 class="icon collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne">What Services do we offer ?</h6>
+                                <div id="collapseOne" class="faq__area-item-body collapse" data-bs-parent="#accordionExample">
+                                    <p>We provide comprehensive oilfield and industrial services tailored to industry needs. Our services include equipment supply, maintenance, and operational support.</p>
+                                </div>
+                            </div>
+                            <div class="faq__area-item">
+                                <h6 class="icon" data-bs-toggle="collapse" data-bs-target="#collapseTwo">How do we ensure quality ?</h6>                                    
+                                <div id="collapseTwo" class="faq__area-item-body collapse show" data-bs-parent="#accordionExample">
+                                    <p>We maintain strict quality control from sourcing to delivery, ensuring our products and services meet industry standards and exceed expectations.</p>
+                                </div>
+                            </div>
+                            <div class="faq__area-item">
+                                <h6 class="icon collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree">What makes us unique ?</h6>
+                                <div id="collapseThree" class="faq__area-item-body collapse" data-bs-parent="#accordionExample">
+                                    <p>Our commitment to innovation, reliability, and customer satisfaction distinguishes us. We prioritize customer needs and foster long-term relationships built on trust and excellence.</p>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+	<!-- Faq Area End -->
+
+    <!-- Blog Area Start -->
+    <div class="blog__three section-padding">
+        <div class="container">
+            <div class="row mb-30">
+                <div class="col-xl-12">
+                    <div class="blog__three-title t-center">
+                        <span class="subtitle-three">Top Stories</span>
+                        <h2>Latest News & Articles</h2>                         
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                {% for blog in blog %}
+                <div class="col-xl-4 col-lg-6">
+                    <div class="blog__three-item" data-background="{{blog.img1.url}}">
+                        <div class="blog__three-item-meta">
+                            <ul>
+                                <li><a href="#"><i class="far fa-calendar-alt"></i>{{blog.created_date.day}} {{blog.created_date|date:"F"}}</a></li>
+                            </ul>
+                        </div>
+                        <h4><a href="{% url "blogdetails" blog.slug %}">{{blog.title}}</a></h4>
+                        <div class="blog__three-item-author">
+                            <img src="{% static "assets/img/images/avatar/avatar.png" %}" alt="avatar-image">
+                            <h6>{{blog.author}}</h6>
+                        </div>
+                        <div class="blog__three-item-btn">
+                            <a href="{% url "blogdetails" blog.slug %}">Read More<i class="far fa-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- Blog Area End -->
+
+    {% endblock body %}
