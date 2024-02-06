@@ -18,7 +18,7 @@
                                 <i class="flaticon-phone-call"></i>
                                 <div class="subscribe__three-right-contact-info">
                                     <span>Make a call</span>
-                                    <h6><a href="tel:+971 56 505 33 40">+971 56 505 33 40</a></h6>
+                                    <h6><a href="tel:+971 56 505 33 40">+971 56 505 3340</a></h6>
                                 </div>
                             </div>
                         </div>
@@ -46,7 +46,7 @@
 						<h4>Our Products</h4>
 						<div class="footer__area-widget-menu three">
                             <ul>
-								{% for product in product %}
+								{% for product in productitem %}
                                 <li><a href="{% url "productviews" product.slug %}">{{product.name}}</a></li>
                                 {% endfor %}
 							</ul>
@@ -59,7 +59,7 @@
 						<div class="footer__three-widget-info">
 							<div class="footer__three-widget-info-item">
                                 <h6>Phone :</h6>
-                                <a href="tel:+023(676)586565">+971 56 505 33 40</a>
+                                <a href="tel:+023(676)586565">+971 56 505 3340</a>
 							</div>
 							<div class="footer__three-widget-info-item">
                                 <h6>Gmail :</h6>

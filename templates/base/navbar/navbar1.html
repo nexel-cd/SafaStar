@@ -31,7 +31,7 @@
                     <div class="col-xl-3 col-lg-3 col-6">
                         <div class="header__area-menubar-left">
                             <div class="header__area-menubar-left-logo three">
-                                <a href="index.html"><img src="{% static "assets\img\images\logo.png" %}" alt="Logo-image"></a>
+                                <a href="/"><img src="{% static "assets\img\images\logo.png" %}" alt="Logo-image"></a>
                             </div>
                         </div>
                     </div>
@@ -49,8 +49,8 @@
                                 </li>
                                 <li class="menu-item-has-children"><a href="">Products</a>
                                     <ul class="sub-menu">
-                                        {% for product in product %}
-                                        <li><a href="{% url "productviews" product.slug %}">{{product.name}}</a></li>
+                                        {% for productitem in productitem %}
+                                        <li><a href="{% url "productviews" productitem.slug %}">{{productitem.name}}</a></li>
                                         {% endfor %}
                                     </ul>
                                 </li>
@@ -95,7 +95,7 @@
                                         </div>
                                         <div class="header__area-menubar-right-sidebar-popup-contact-item-content">
                                             <span>Call Now</span>
-                                            <h6><a href="tel:+125(895)658568">+125 (895) 658 568</a></h6>
+                                            <h6><a href="tel:+971 56 505 33 40">+971 56 505 33 40</a></h6>
                                         </div>
                                     </div>
                                     <div class="header__area-menubar-right-sidebar-popup-contact-item">
@@ -104,7 +104,7 @@
                                         </div>
                                         <div class="header__area-menubar-right-sidebar-popup-contact-item-content">
                                             <span>Quick Email</span>
-                                            <h6><a href="mailto:info.help@gmail.com">info.help@gmail.com</a></h6>
+                                            <h6><a href="mailto:sales@thesafastar.com">sales@thesafastar.com</a></h6>
                                         </div>
                                     </div>
                                     <div class="header__area-menubar-right-sidebar-popup-contact-item">
@@ -113,7 +113,7 @@
                                         </div>
                                         <div class="header__area-menubar-right-sidebar-popup-contact-item-content">
                                             <span>Office Address</span>
-                                            <h6><a href="https://www.google.com/maps" target="_blank">PV3M+X68 Welshpool United Kingdom</a></h6>
+                                            <h6><a href="#"  target="_blank">P.O Box 46780 – Deira, Dubai, UAE</a></h6>
                                         </div>
                                     </div>
                                 </div>
@@ -133,7 +133,7 @@
                             <div class="menu__bar-popup-close"><i class="fal fa-times"></i></div>
                             <div class="menu__bar-popup-left">
                                 <div class="menu__bar-popup-left-logo">
-                                    <a href="index.html"><img src="assets/img/logo-6.png" alt="logo-image"></a>
+                                    <a href="/"><img src="{% static "assets\img\images\logo.png" %}" alt="logo-image"></a>
                                     <div class="responsive-menu"></div>
                                 </div>
                                 <div class="menu__bar-popup-left-social">
@@ -162,19 +162,19 @@
                                     <div class="menu__bar-popup-right-contact-item">
                                         <div class="menu__bar-popup-right-contact-item-info">
                                             <span>Call Now</span>
-                                            <h6><a href="tel:+125(895)658568">+125 (895) 658 568</a></h6>
+                                            <h6><a href="tel:+971 56 505 33 40">+971 56 505 33 40</a></h6>
                                         </div>
                                     </div>
                                     <div class="menu__bar-popup-right-contact-item">
                                         <div class="menu__bar-popup-right-contact-item-info">
                                             <span>Quick Email</span>
-                                            <h6><a href="mailto:info.help@gmail.com">info.help@gmail.com</a></h6>
+                                            <h6><a href="mailto:sales@thesafastar.com">sales@thesafastar.com</a></h6>
                                         </div>
                                     </div>
                                     <div class="menu__bar-popup-right-contact-item">
                                         <div class="menu__bar-popup-right-contact-item-info">
                                             <span>Office Address</span>
-                                            <h6><a href="https://www.google.com/maps" target="_blank">PV3M+X68 Welshpool United Kingdom</a></h6>
+                                            <h6><a href="#" target="_blank">P.O Box 46780 – Deira, Dubai, UAE</a></h6>
                                         </div>
                                     </div>
                                 </div>

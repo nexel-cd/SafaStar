@@ -10,15 +10,15 @@
 {% for blogdetail in blogdetail %}
 	<!-- Page Banner Area Start -->
     <div class="page__banner">
-		<div class="page__banner-image" data-background="{% static "assets/img/banner/page-banner.jpg" %}"></div>
+		<div class="page__banner-image" data-background="{% static "assets/img/banner/blog-baneer.png" %}"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-xl-12">
 					<div class="page__banner-content">
 						<h1>{{blogdetail.title}}</h1>
 						<ul>
-							<li><a href="index.html">Home</a><span>|</span></li>
-							<li>Blogs</li>
+							<li><a href="/">Home</a><span>|</span></li>
+							<li style="color: white;">Blogs</li>
 						</ul>
 					</div>
 				</div>
@@ -39,7 +39,7 @@
 						</div>
                         <div class="blog__details-left-meta">
                             <ul>
-                                <li><a href="single-right-sidebar.html"><i class="far fa-user"></i>By-{{blogdetail.author}}</a></li>
+                                <li><a><i class="far fa-user"></i>By-{{blogdetail.author}}</a></li>
                            
                             </ul>
                         </div>

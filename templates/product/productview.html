@@ -8,7 +8,7 @@
 
     <!-- Page Banner Area Start -->
     <div class="page__banner">
-		<div class="page__banner-image" data-background="{% static "assets/img/banner/page-banner.jpg" %}"></div>
+		<div class="page__banner-image" data-background="{% static "assets/img/banner/products-baneer.png" %}"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-xl-12">
@@ -16,7 +16,7 @@
 						<h1>{{product.name}}</h1>
 						<ul>
 							<li><a href="{% url "home" %}">Home</a><span>|</span></li>
-							<li>{{product.name}}</li>
+							<li style="color: white;">{{product.name}}</li>
 						</ul>
 					</div>
 				</div>
@@ -44,7 +44,7 @@
                         <br>
                         <div class="row">
                             {% for x in productitems %}
-                            <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="col-xl-4 col-lg-4 col-md-6 p-5">
                                 <div class="project__one-item">
                                     <img class="img__full" src="{{x.img.url}}" alt="renters-insurance">
                                     <div class="project__one-item-content">

@@ -52,7 +52,7 @@
             <div class="header__area-menubar p-relative">
                 <div class="header__area-menubar-left">
                     <div class="header__area-menubar-left-logo">
-                        <a href="index.html"><img class="dark-n" src="{% static "assets\img\images\logo.png" %}" alt="Logo-image"><img class="light-n" src="assets/img/logo-8.png" alt="Logo-image"></a>
+                        <a href="/"><img class="dark-n" src="{% static "assets\img\images\logo-dark.png" %}" alt="Logo-image"><img class="light-n" src="{% static "assets\img\images\logo.png" %}" alt="Logo-image"></a>
                     </div>
                 </div>
 				<div class="header__area-menubar-center">
@@ -69,8 +69,8 @@
 							</li>
 							<li class="menu-item-has-children"><a href="">Products</a>
 								<ul class="sub-menu">
-									{% for product in product %}
-									<li><a href="{% url "productviews" product.slug %}">{{product.name}}</a></li>
+									{% for productitem in productitem %}
+									<li><a href="{% url "productviews" productitem.slug %}">{{productitem.name}}</a></li>
 									{% endfor %}
 								</ul>
 							</li>
@@ -90,7 +90,7 @@
 						<div class="header__area-menubar-right-sidebar-popup-icon"><i class="flaticon-dots-menu"></i></div>
 					</div>
 					<div class="header__area-menubar-right-btn">						
-						<a class="btn-one" href="request-quote.html">Get A Quote</a>
+						<a class="btn-one" href="{% url "Contactus" %}">Get A Quote</a>
 					</div>
 					<div class="header__area-menubar-right-responsive-menu menu__bar">
 						<i class="flaticon-dots-menu"></i>
@@ -99,7 +99,7 @@
 					<div class="header__area-menubar-right-sidebar-popup">
 						<div class="sidebar-close-btn"><i class="fal fa-times"></i></div>
 						<div class="header__area-menubar-right-sidebar-popup-logo">
-							<a href="index.html"> <img src="{% static "assets\img\images\logo.png" %}" alt="Logo-image"> </a>
+							<a href="/"> <img src="{% static "assets\img\images\logo.png" %}" alt="Logo-image"> </a>
 						</div>
 						<p>Established in 2000, Safa Star strategically positioned itself in Dubai, recognizing the city's pivotal role in global trade between the Middle East, Asia, and Africa.</p>
 						<div class="header__area-menubar-right-sidebar-popup-contact">
@@ -110,7 +110,7 @@
 								</div>
 								<div class="header__area-menubar-right-sidebar-popup-contact-item-content">
 									<span>Call Now</span>
-									<h6><a href="tel:+125(895)658568">+125 (895) 658 568</a></h6>
+									<h6><a href="tel:+971565053340">+971565053340</a></h6>
 								</div>
 							</div>
 							<div class="header__area-menubar-right-sidebar-popup-contact-item">
@@ -119,7 +119,7 @@
 								</div>
 								<div class="header__area-menubar-right-sidebar-popup-contact-item-content">
 									<span>Quick Email</span>
-									<h6><a href="mailto:info.help@gmail.com">info.help@gmail.com</a></h6>
+									<h6><a href="mailto:info.help@gmail.com">sales@thesafastar.com</a></h6>
 								</div>
 							</div>
 							<div class="header__area-menubar-right-sidebar-popup-contact-item">
@@ -128,7 +128,7 @@
 								</div>
 								<div class="header__area-menubar-right-sidebar-popup-contact-item-content">
 									<span>Office Address</span>
-									<h6><a href="https://www.google.com/maps" target="_blank">PV3M+X68 Welshpool United Kingdom</a></h6>
+									<h6><a href="#" target="_blank">P.O Box 46780 – Deira, Dubai, UAE</a></h6>
 								</div>
 							</div>
 						</div>
@@ -149,7 +149,7 @@
 				<div class="menu__bar-popup-close"><i class="fal fa-times"></i></div>
 				<div class="menu__bar-popup-left">
 					<div class="menu__bar-popup-left-logo">
-						<a href="index.html"><img src="assets/img/logo-8.png" alt="logo-image"></a>
+						<a href="/"><img src="{% static "assets\img\images\logo.png" %}" alt="logo-image"></a>
 						<div class="responsive-menu"></div>
 					</div>
 					<div class="menu__bar-popup-left-social">
@@ -178,19 +178,19 @@
 						<div class="menu__bar-popup-right-contact-item">
 							<div class="menu__bar-popup-right-contact-item-info">
 								<span>Call Now</span>
-								<h6><a href="tel:+125(895)658568">+125 (895) 658 568</a></h6>
+								<h6><a href="tel:+971565053340">+971 56 505 33 40</a></h6>
 							</div>
 						</div>
 						<div class="menu__bar-popup-right-contact-item">
 							<div class="menu__bar-popup-right-contact-item-info">
 								<span>Quick Email</span>
-								<h6><a href="mailto:info.help@gmail.com">info.help@gmail.com</a></h6>
+								<h6><a href="mailto:sales@thesafastar.com">sales@thesafastar.com</a></h6>
 							</div>
 						</div>
 						<div class="menu__bar-popup-right-contact-item">
 							<div class="menu__bar-popup-right-contact-item-info">
 								<span>Office Address</span>
-								<h6><a href="https://www.google.com/maps" target="_blank">PV3M+X68 Welshpool United Kingdom</a></h6>
+								<h6><a href="#" target="_blank">P.O Box 46780 – Deira, Dubai, UAE</a></h6>
 							</div>
 						</div>
 					</div>

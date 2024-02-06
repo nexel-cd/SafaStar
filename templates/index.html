@@ -16,7 +16,7 @@
 								<h1 data-animation="fadeInUp" data-delay=".6s" style="color: black;">Innovate Empower Excel.</h1>
 								<p data-animation="fadeInUp" data-delay=".9s" style="color: black;">Leading the Industry with Quality Oils & Chemicals WorldWide.</p>
 								<div class="banner__three-content-button" data-animation="fadeInUp" data-delay="1.2s">
-                                    <a class="btn-one" href="about.html">Discover More</a>
+                                    <a class="btn-one" href={% url "allbrands" %}>Discover More</a>
                                 </div>
                                 <div class="banner-pagination"></div>
 							</div>
@@ -34,7 +34,7 @@
 								<h1 data-animation="fadeInUp" data-delay=".6s" style="color: black;">Innovate Empower Excel.</h1>
 								<p data-animation="fadeInUp" data-delay=".9s" style="color: black;">Leading the Industry with Quality Oils & Chemicals WorldWide.</p>
 								<div class="banner__three-content-button" data-animation="fadeInUp" data-delay="1.2s">
-                                    <a class="btn-one" href="about.html">Discover More</a>
+                                    <a class="btn-one" href="{% url "allbrands" %}">Discover More</a>
                                 </div>
                                 <div class="banner-pagination"></div>
 							</div>
@@ -115,7 +115,7 @@
       
           .carousel-container {
             display: flex;
-            width: 600%; /* 4 images, each taking up 100% of the width */
+            width: 800%; /* 4 images, each taking up 100% of the width */
             animation: scroll 20s infinite linear; /* scroll for 20 seconds and repeat infinitely */
             animation-delay: 2s; /* delay animation by 2 seconds for a more attractive effect */
           }
@@ -150,7 +150,7 @@
               transform: translateX(0);
             }
             100% {
-              transform: translateX(-10%); /* move container 3x the width of one image */
+              transform: translateX(-20%); /* move container 3x the width of one image */
             }
           }
       
@@ -169,32 +169,34 @@
         </script>
         <div class="carousel ftco-animate">
           <div class="carousel-container">
-            <img src="https://i.ibb.co/BBrgfMM/St-lawrence.png">
-            <img src="https://i.ibb.co/4YfDQxr/2.png" alt="">
-            <img src="https://i.ibb.co/hMRdGvM/3.png" alt="">
-            <img src="https://i.ibb.co/bKn15SZ/4.png" alt="">
-            <img src="https://i.ibb.co/8rFmZQk/5.png" alt="">
-            <img src="https://i.ibb.co/2nxmj4r/7.png" alt="">
-            <img src="https://i.ibb.co/2gZb5Lz/8.png" alt="">
-            <img src="https://i.ibb.co/DrCCS2C/9.png" alt="">
-            <img src="https://i.ibb.co/vhKTCZ2/10.png" alt="">
-            <img src="https://i.ibb.co/LvgF2sN/11.png" alt="">
-            <img src="https://i.ibb.co/FBgFzQH/12.png" alt="">
-            <img src="https://i.ibb.co/5M2wBWm/13.png" alt="">
-            <img src="https://i.ibb.co/z8nQNvG/6.png" alt="">
-            <img src="https://i.ibb.co/hdYJMyf/1.png">
-            <img src="https://i.ibb.co/4YfDQxr/2.png" alt="">
-            <img src="https://i.ibb.co/hMRdGvM/3.png" alt="">
-            <img src="https://i.ibb.co/bKn15SZ/4.png" alt="">
-            <img src="https://i.ibb.co/8rFmZQk/5.png" alt="">
-            <img src="https://i.ibb.co/2nxmj4r/7.png" alt="">
-            <img src="https://i.ibb.co/2gZb5Lz/8.png" alt="">
-            <img src="https://i.ibb.co/DrCCS2C/9.png" alt="">
-            <img src="https://i.ibb.co/vhKTCZ2/10.png" alt="">
-            <img src="https://i.ibb.co/LvgF2sN/11.png" alt="">
-            <img src="https://i.ibb.co/FBgFzQH/12.png" alt="">
-            <img src="https://i.ibb.co/5M2wBWm/13.png" alt="">
-            <img src="https://i.ibb.co/z8nQNvG/6.png" alt="">
+            <img src="https://i.ibb.co/T0h0Nmw/aaf.png">
+            <img src="https://i.ibb.co/P1sDL9M/caltex.png" alt="">
+            <img src="https://i.ibb.co/9tpgJ0v/castrol.png" alt="">
+            <img src="https://i.ibb.co/37wby3B/dewalt.png" alt="">
+            <img src="https://i.ibb.co/KmBJ938/donaldson.png" alt="">
+            <img src="https://i.ibb.co/MPDFqpN/ecolab.png" alt="">
+            <img src="https://i.ibb.co/mRdSpm8/eflochem.png" alt="">
+            <img src="https://i.ibb.co/QdVLCnp/makita.png" alt="">
+            <img src="https://i.ibb.co/dMLxJWk/midas.png" alt="">
+            <img src="https://i.ibb.co/N1yLWqR/mobil.png" alt="">
+            <img src="https://i.ibb.co/NmM639L/msa.png" alt="">
+            <img src="https://i.ibb.co/t4cqKfC/purolyt.png" alt="">
+            <img src="https://i.ibb.co/jDF1F5T/shell.png" alt="">
+            <img src="https://i.ibb.co/ZYKLGqF/stanly.png" alt="">
+            <img src="https://i.ibb.co/T0h0Nmw/aaf.png" alt="">
+            <img src="https://i.ibb.co/P1sDL9M/caltex.png" alt="">
+            <img src="https://i.ibb.co/9tpgJ0v/castrol.png" alt="">
+            <img src="https://i.ibb.co/37wby3B/dewalt.png" alt="">
+            <img src="https://i.ibb.co/KmBJ938/donaldson.png" alt="">
+            <img src="https://i.ibb.co/MPDFqpN/ecolab.png" alt="">
+            <img src="https://i.ibb.co/mRdSpm8/eflochem.png" alt="">
+            <img src="https://i.ibb.co/QdVLCnp/makita.png" alt="">
+            <img src="https://i.ibb.co/dMLxJWk/midas.png" alt="">
+            <img src="https://i.ibb.co/N1yLWqR/mobil.png" alt="">
+            <img src="https://i.ibb.co/NmM639L/msa.png" alt="">
+            <img src="https://i.ibb.co/t4cqKfC/purolyt.png" alt="">
+            <img src="https://i.ibb.co/jDF1F5T/shell.png" alt="">
+            <img src="https://i.ibb.co/ZYKLGqF/stanly.png" alt="">
           </div>
         </div>
       </section>
@@ -219,7 +221,7 @@
             </div>
         </div>
         <div class="portfolio">
-            {% for product in product %}
+            {% for product in productitem %}
             <div class="portfolio__three-item">
                 <img src="{{product.img.url}}" alt="car-insurance">
                 <div class="portfolio__three-item-content vertical">
@@ -320,7 +322,7 @@
 				</div>
 				<div class="col-xl-6 col-lg-4">
 					<div class="cta__area-btn t-right lg-t-center">
-						<a class="btn-two" href="request-quote.html">Get Connected</a>						
+						<a class="btn-two" href={% url "Contactus" %}>Get Connected</a>						
 					</div>
 				</div>
 			</div>
