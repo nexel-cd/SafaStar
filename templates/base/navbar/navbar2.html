@@ -35,10 +35,11 @@
 						<h6>Follow Us :</h6>
 						<div class="top__bar-right-social">
 							<ul>
-								<li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-								<li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
-								<li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
-								<li><a href="https://dribbble.com" target="_blank"><i class="fab fa-dribbble"></i></a></li>
+								<li><a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i><span>Linkedin</span></a></li>
+								<li><a href="https://www.facebook.com" target="_blank"><i class="fa fa-envelope"></i><span>Mail</span></a></li>
+								<li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-whatsapp"></i><span>WhatsApp</span></a></li>
+								<li><a href="https://twitter.com" target="_blank"><i class="fab fa-weixin"></i><span>Wechat</span></a></li>
+								<li><a href="https://dribbble.com" target="_blank"><i class="fab fa-telegram"></i><span>Telegram</span></a></li>
 							</ul>
 						</div>
 					</div>
@@ -60,12 +61,8 @@
 						<ul id="mobilemenu">
 							<li class="menu-item"><a href="/">Home</a></li>
 							<li class="menu-item"><a href="{% url "about" %}">About Us</a></li>
-							<li class="menu-item-has-children"><a href="{% url "allbrands" %}">Brands</a>
-								<ul class="sub-menu">
-									{% for brandsitem in brandsitem %}
-									<li><a href="{% url "brandsview" brandsitem.slug %}">{{brandsitem.brand}}</a></li>
-									{% endfor %}
-								</ul>
+							<li class="menu-item"><a href="{% url "allbrands" %}">Brands</a>
+								
 							</li>
 							<li class="menu-item-has-children"><a href="">Products</a>
 								<ul class="sub-menu">
@@ -74,7 +71,7 @@
 									{% endfor %}
 								</ul>
 							</li>
-							<li class="menu-item"><a href="{% url "allblogs" %}">Blog</a>
+							<li class="menu-item"><a href="{% url "allblogs" %}">Updates</a>
 							</li>
 							<li class="menu-item"><a href="{% url "Contactus" %}">Contact Us</a>
 							</li>
@@ -101,7 +98,7 @@
 						<div class="header__area-menubar-right-sidebar-popup-logo">
 							<a href="/"> <img src="{% static "assets\img\images\logo.png" %}" alt="Logo-image"> </a>
 						</div>
-						<p>Established in 2000, Safa Star strategically positioned itself in Dubai, recognizing the city's pivotal role in global trade between the Middle East, Asia, and Africa.</p>
+						<p>Established in 2000, Safa Star strategically positioned itself in UAE, recognizing the city's pivotal role in global trade between the Middle East, Asia, and Africa.</p>
 						<div class="header__area-menubar-right-sidebar-popup-contact">
 							<h4 class="mb-30">Get In Touch</h4>
 							<div class="header__area-menubar-right-sidebar-popup-contact-item">
@@ -118,7 +115,7 @@
 									<i class="fal fa-envelope"></i>
 								</div>
 								<div class="header__area-menubar-right-sidebar-popup-contact-item-content">
-									<span>Quick Email</span>
+									<span>Email</span>
 									<h6><a href="mailto:info.help@gmail.com">sales@thesafastar.com</a></h6>
 								</div>
 							</div>
@@ -128,16 +125,17 @@
 								</div>
 								<div class="header__area-menubar-right-sidebar-popup-contact-item-content">
 									<span>Office Address</span>
-									<h6><a href="#" target="_blank">P.O Box 46780 – Deira, Dubai, UAE</a></h6>
+									<h6><a href="#" target="_blank">Mai Tower - Office No 1 - 1508 Baghdad Street - Al Qusais - Al Nahda 1 - Dubai - United Arab Emirates</a></h6>
 								</div>
 							</div>
 						</div>
 						<div class="header__area-menubar-right-sidebar-popup-social">
 							<ul>
-								<li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-								<li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
-								<li><a href="https://www.behance.net" target="_blank"><i class="fab fa-behance"></i></a></li>
-								<li><a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+								<li><a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i><span>Linkedin</span></a></li>
+								<li><a href="https://www.facebook.com" target="_blank"><i class="fa fa-envelope"></i><span>Mail</span></a></li>
+								<li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-whatsapp"></i><span>WhatsApp</span></a></li>
+								<li><a href="https://twitter.com" target="_blank"><i class="fab fa-weixin"></i><span>Wechat</span></a></li>
+								<li><a href="https://dribbble.com" target="_blank"><i class="fab fa-telegram"></i><span>Telegram</span></a></li>
 							</ul>							
 						</div>
 					</div>
@@ -155,13 +153,11 @@
 					<div class="menu__bar-popup-left-social">
 						<h6>Follow Us</h6>
 						<ul>
-							<li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-							<li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
-							<li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
-							<li><a href="https://dribbble.com" target="_blank"><i class="fab fa-dribbble"></i></a></li>							
-							<li><a href="https://www.behance.net" target="_blank"><i class="fab fa-behance"></i></a></li>
-							<li><a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-							<li><a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></li>
+							<li><a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i><span>Linkedin</span></a></li>
+							<li><a href="https://www.facebook.com" target="_blank"><i class="fa fa-envelope"></i><span>Mail</span></a></li>
+							<li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-whatsapp"></i><span>WhatsApp</span></a></li>
+							<li><a href="https://twitter.com" target="_blank"><i class="fab fa-weixin"></i><span>Wechat</span></a></li>
+							<li><a href="https://dribbble.com" target="_blank"><i class="fab fa-telegram"></i><span>Telegram</span></a></li>
 						</ul>						
 					</div>
 				</div>
@@ -183,14 +179,14 @@
 						</div>
 						<div class="menu__bar-popup-right-contact-item">
 							<div class="menu__bar-popup-right-contact-item-info">
-								<span>Quick Email</span>
+								<span>Email</span>
 								<h6><a href="mailto:sales@thesafastar.com">sales@thesafastar.com</a></h6>
 							</div>
 						</div>
 						<div class="menu__bar-popup-right-contact-item">
 							<div class="menu__bar-popup-right-contact-item-info">
 								<span>Office Address</span>
-								<h6><a href="#" target="_blank">P.O Box 46780 – Deira, Dubai, UAE</a></h6>
+								<h6><a href="#" target="_blank">Mai Tower - Office No 1 - 1508 Baghdad Street - Al Qusais - Al Nahda 1 - Dubai - United Arab Emirates</a></h6>
 							</div>
 						</div>
 					</div>

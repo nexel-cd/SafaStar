@@ -1,7 +1,25 @@
 {% extends "base/base.html" %}
 {% load static %}
+{% block head %}
+
+{% for product in product %}
+<title>{{product.name}} | Safa Star</title>
+{% endfor %}
+<meta name="description" content="Discover Safa Star's wide range of high-quality products for various industries, including lubricants, industry chemicals, safety products, building materials, and hardware. Find reliable solutions for your industrial needs with Safa Star's commitment to quality and customer satisfaction.">
+<meta name="keywords" content="Safa Star, industrial supplies, lubricants, industry chemicals, safety products, building materials, hardware, quality products, industrial solutions, customer satisfaction">
+
+
+
+<meta name="author" content="Safa Star">
+<!-- Canonical Link -->
+<link rel="canonical" href="https://www.thesafastar.com/">
+
+<!-- Robots -->
+<meta name="robots" content="index,follow">
+
+{% endblock head %}
 {% block body %}
-{% include "base\navbar\navbar2.html" %}
+{% include "base/navbar/navbar2.html" %}
 
 
     {% for product in product %}
@@ -30,7 +48,7 @@
 			<div class="row">
 				<div class="col-xl-12">
 					<div class="project__single-image mb-60 dark__image">
-						<img src="{{product.img.url}}" alt="project-image">
+						<img src="{{product.img.url}}" alt="{{product.name}}-safastar">
 					</div>
 				</div>
 			</div>
@@ -46,7 +64,7 @@
                             {% for x in productitems %}
                             <div class="col-xl-4 col-lg-4 col-md-6 p-5">
                                 <div class="project__one-item">
-                                    <img class="img__full" src="{{x.img.url}}" alt="renters-insurance">
+                                    <img class="img__full" src="{{x.img.url}}" alt="{{x.brand}}-safastar-brand">
                                     <div class="project__one-item-content">
                                         <span>{{x.product}}</span>
                                         <h4><a href="{% url "brandsview" x.brand.slug %}">{{x.brand}}</a></h4>
@@ -105,12 +123,12 @@
 
 				
                         <div class="all__sidebar-item-help" data-background="{{adss.img.url}}">
-							<img class="all__sidebar-item-help-shape" src="{% static "assets/img/shape/support.png" %}" alt="">
-                            <h4>Request a Free Call in Today !</h4>
+							<img class="all__sidebar-item-help-shape" src="{% static "assets/img/shape/support.png" %}" alt="contact-safastar-image">
+                            <h4>Get connected to our Engineers !</h4>
                             <div class="all__sidebar-item-help-contact">
                                 <i class="flaticon-phone-call"></i>
                                 <div class="all__sidebar-item-help-contact-content">
-                                    <span>Quick Help</span>
+                                    <span>Call Us</span>
                                     <h6><a href="tel:+125(895)658568">+125 (895) 658 568</a></h6>
                                 </div>
                             </div>

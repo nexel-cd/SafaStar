@@ -1,11 +1,24 @@
 {% extends "base/base.html" %}
 {% load static %}
+{% block head %}
+<title>All Brands | Safa Star</title>
+
+<meta name="description" content="Discover a wide range of top brands available at Safa Star. From Mobil and Shell to Castrol and more, find high-quality products for your industrial needs.">
+<meta name="keywords" content="brands, Mobil, Shell, Castrol, Caltex, Donaldson, American Air Filter Company, Inc., Eflochem, Ecolab, Purolyt, Stanley, Dewalt, Makita, Midas, MSA, Safa Star">
+<meta name="author" content="Safa Star">
+<!-- Canonical Link -->
+<link rel="canonical" href="https://www.thesafastar.com/">
+
+<!-- Robots -->
+<meta name="robots" content="index,follow">
+
+{% endblock head %}
 {% block body %}
-{% include "base\navbar\navbar2.html" %}	
+{% include "base/navbar/navbar2.html" %}	
     
 <!-- Page Banner Area Start -->
 <div class="page__banner">
-    <div class="page__banner-image" data-background="{% static "assets/img/banner/brands.png" %}"></div>
+    <div class="page__banner-image" data-background="{% static "assets/img/banner/brands-banner.png" %}"></div>
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
@@ -29,12 +42,10 @@
             <div class="col-lg-4 col-md-6 mb-30">
                 <div class="services__one-item m-0">
                     <div class="services__one-item-image">
-                        <img src="{{brands.img1.url}}" alt="liability-insurance">
+                        <img src="{{brands.img1.url}}" alt="{{brands.brand}}-safastar-brands">
                     </div>
                     <div class="services__one-item-content">
-                        {% comment %} <div class="services__one-item-content-icon">
-                            <i class="flaticon-insurance"></i>
-                        </div> {% endcomment %}
+                        
                         <h4 style="text-align:center;"><a href="{% url "brandsview" brands.slug %}">{{brands.brand}}</a></h4>
                     </div>
                 </div>

@@ -431,7 +431,7 @@ h6 {
 }
 
 .subtitle-four {
-  color: var(--primary-color-1);
+  color: red;
 }
 .subtitle-four::before {
   background-image: url("../../assets/img/icon/subtitle-1.png");

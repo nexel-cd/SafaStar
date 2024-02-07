@@ -2,8 +2,24 @@
 
 {% extends "base/base.html" %}
 {% load static %}
+
+{% block head %}
+
+{% for blogdetail in blogdetail %}
+<title>{{blogdetail.title}} | Latest News and Insights | Safa Star</title>
+{% endfor %}
+<meta name="description" content="{{blogdetail.title}},Stay informed with the latest industry updates, news, and insights on Safa Star's Updates page. Explore trends, developments, and innovations in the oilfield and industrial sectors.">
+<meta name="keywords" content="{{blogdetail.title}},industry updates, latest news, industry insights, oilfield updates, industrial news, industry trends, industry developments, Safa Star">
+<meta name="author" content="Safa Star">
+<!-- Canonical Link -->
+<link rel="canonical" href="https://www.thesafastar.com/">
+
+<!-- Robots -->
+<meta name="robots" content="index,follow">
+
+{% endblock head %}
 {% block body %}
-{% include "base\navbar\navbar2.html" %}	
+{% include "base/navbar/navbar2.html" %}	
 
 
 
@@ -218,11 +234,11 @@
                         </div>
                         <div class="all__sidebar-item-help" data-background="{{adss.img.url}}">
 							<img class="all__sidebar-item-help-shape" src="{% static "assets/img/shape/support.png" %}" alt="">
-                            <h4>Request a Free Call in Today !</h4>
+                            <h4>Get connected to our Engineers !</h4>
                             <div class="all__sidebar-item-help-contact">
                                 <i class="flaticon-phone-call"></i>
                                 <div class="all__sidebar-item-help-contact-content">
-                                    <span>Quick Help</span>
+                                    <span>Call Us</span>
                                     <h6><a href="tel:+125(895)658568">+125 (895) 658 568</a></h6>
                                 </div>
                             </div>

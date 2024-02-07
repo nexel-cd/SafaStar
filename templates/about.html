@@ -1,16 +1,32 @@
 {% extends "base/base.html" %}
 {% load static %}
+{% block head %}
+
+
+<meta name="keywords" content="Safa Star, oilfield supplies, industrial supplies, UAE, quality products, reliability, customer satisfaction, top-notch service, leading provider, about us">
+<meta name="description" content="Learn about Safa Star, a leading provider of oilfield and industrial supplies based in the UAE. Discover our commitment to quality, reliability, and customer satisfaction. Find out how we strive to exceed expectations in delivering top-notch products and services to our valued clients.">
+<meta name="author" content="Safa Star">
+
+<title>About Safa Star | Your Trusted Partner for Oilfield and Industrial Supplies</title>
+
+<!-- Canonical Link -->
+<link rel="canonical" href="https://www.thesafastar.com/">
+
+<!-- Robots -->
+<meta name="robots" content="index,follow">
+
+{% endblock head %}
 {% block body %}
-{% include "base\navbar\navbar2.html" %}
+{% include "base/navbar/navbar2.html" %}
 
 	<!-- Page Banner Area Start -->
     <div class="page__banner">
-		<div class="page__banner-image" data-background="{% static "assets/img/banner/about us banner.png" %}"></div>
+		<div class="page__banner-image" data-background="{% static "assets/img/banner/about-banner.png" %}"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-xl-12">
 					<div class="page__banner-content">
-						<h1>Company About</h1>
+						<h1>About Us</h1>
 						<ul>
 							<li><a href="/">Home</a><span>|</span></li>
 							<li style="color:white;">Company About</li>
@@ -33,10 +49,10 @@
 							<img class="about__four-left-image-shape" src="{% static "assets/img/shape/benefits.png" %}" alt="shape">
 							<img class="about__four-left-image-shape-one left-right-animate" src="{% static "assets/img/shape/about-7.png" %}" alt="shape">
 							<div class="image-overlay dark__image">
-								<img class="about__four-left-image-one" src="{% static "assets/img/shape/about-benefits.png" %}" alt="benefits-image">
+								<img class="about__four-left-image-one" src="{% static "assets/img/shape/about-benefits.png" %}" alt="about-safastar-image">
 							</div>
 							<div class="about__four-left-image-two image-overlay dark__image">
-								<img src="{% static "assets/img/shape/about-benefits-1.png" %}" alt="benefits-image">							
+								<img src="{% static "assets/img/shape/about-benefits-1.png" %}" alt="about-safastar-image">							
 							</div>
 						</div>
 					</div>
@@ -45,29 +61,10 @@
 					<div class="about__four-right">
 						<div class="about__four-right-title">
 							<span class="subtitle-four">Company Overview</span>
-							<h2>Discover Better way to Plan for Your Family</h2>
-							<p>Established in 2000, Safa Star strategically positioned itself in Dubai, recognizing the city's pivotal role in global trade between the Middle East, Asia, and Africa. SAFA STAR is committed to delivering professional and specialized services to clients in Dubai - UAE, and beyond. Serving as a key supplier of equipment and spare parts, Safa Star has become a trusted partner for organizations in the UAE, Qatar, Bahrain, Saudi Arabia, and other Gulf countries, while actively engaging in fulfilling export inquiries from diverse markets in Middle east and Africa . The company's enduring presence and dedication to excellence underscore its role as a valuable contributor to the growth and success of businesses throughout the region.</p>
+							<h2 style="font-size:42px">Streamlining Procurement, Strengthening Partnership</h2><br>
+							<p>Established in 2000, Safa Star strategically positioned itself in Dubai, recognizing the city's pivotal role in global trade between the Middle East, Asia, and Africa. SAFA STAR is committed to delivering professional and specialized services to all its clients around Globe. Serving as a key supplier of Capital Equipment and Consumables, Safa Star has become a trusted partner for organizations in the UAE, Qatar, Bahrain, Saudi Arabia, and other Gulf countries, while actively engaging in fulfilling export inquiries from diverse markets in Central Asia, Caspian Region, and African Countries. The company's enduring presence and dedication to excellence underscore its role as a valuable contributor to the growth and success of its partners and their businesses throughout the region.</p>
 						</div>
-						{% comment %} <div class="about__four-right-bottom">
-							<div class="skill__area-item">
-								<div class="skill__area-item-content">
-									<h6>Customer Service</h6> 
-									<span class="skill__area-item-count text-two"><span class="counter">64</span>%</span>
-								</div>
-								<div class="skill__area-item-inner">
-									<div class="skill__area-item-bar" data-width="64"></div>
-								</div>
-							</div>                
-							<div class="skill__area-item">
-								<div class="skill__area-item-content">
-									<h6>Customer Service</h6> 
-									<span class="skill__area-item-count text-two"><span class="counter">84</span>%</span>
-								</div>
-								<div class="skill__area-item-inner">
-									<div class="skill__area-item-bar" data-width="84"></div>
-								</div>
-							</div>                
-                        </div>	 {% endcomment %}
+						
 						
 					</div>
 				</div>
@@ -76,92 +73,7 @@
 	</div>
 	<!-- About Area End -->
 
-	<!-- Counter Area Start -->
-	<!--div class="counter__three section-padding pt-0">
-		<div class="container">
-			<div class="row">
-				<div class="col-xl-12">
-					<div class="counter__two-bg">
-						<div class="counter__two-item">
-							<div class="counter__two-item-icon">
-								<i class="flaticon-team"></i>
-							</div>
-							<div class="counter__two-item-content">
-								<h2><span class="counter">259</span>+</h2>
-								<h6>Expert Team</h6>
-							</div>
-						</div>
-						<div class="counter__two-item">
-							<div class="counter__two-item-icon">
-								<i class="flaticon-success"></i>
-							</div>
-							<div class="counter__two-item-content">
-								<h2><span class="counter">259</span>+</h2>
-								<h6>National Award</h6>
-							</div>
-						</div>
-						<div class="counter__two-item">
-							<div class="counter__two-item-icon">
-								<i class="flaticon-project-management"></i>
-							</div>
-							<div class="counter__two-item-content">
-								<h2><span class="counter">259</span>+</h2>
-								<h6>Project Completed</h6>
-							</div>
-						</div>
-						<div class="counter__two-item">
-							<div class="counter__two-item-icon">
-								<i class="flaticon-costumer"></i>
-							</div>
-							<div class="counter__two-item-content">
-								<h2><span class="counter">259</span>+</h2>
-								<h6>Happy Client</h6>
-							</div>
-						</div>						
-					</div>
-				</div>
-			</div>
-		</div>
-	</div-->
-	<!-- Counter Area End -->
-
-    <!-- Cta Area Start -->
-    <!-- div class="cta__three section-padding" data-background="{% static "assets/img/pages/video.jpg" %}">	
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-6 col-lg-5 lg-mb-30">
-                    <div class="cta__three-title">
-                        <span class="subtitle-four">Need any Help?</span>
-                        <h2>Connect with Our Team for Assistance</h2>
-						<a class="btn-one mt-30" href="team.html">Our Team</a>
-                    </div>
-                </div>
-                <div class="col-xl-6 col-lg-7">
-                    <div class="cta__three-info">
-                        <div class="cta__three-info-item">
-                            <div class="cta__three-info-item-icon">
-                                <i class="fal fa-phone-alt icon-animation"></i>
-                            </div>
-                            <div>
-                                <span>Call us 24/7</span>
-                                <h6><a href="tel:+125(895)658568">+125 (895) 658 568</a></h6>
-                            </div>
-                        </div>
-                        <div class="cta__three-info-item">
-                            <div class="cta__three-info-item-icon">
-                                <i class="fal fa-envelope-open-text"></i>
-                            </div>
-                            <div>
-                                <span>Mail us anytime</span>
-                                <h6><a href="mailto:support@gmail.com">support@gmail.com</a></h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div -->
-    <!-- Cta Area End -->
+	
 	
 	<!-- About Company Two Area Start -->
 	<div class="company__two section-padding pb-0">
@@ -173,25 +85,16 @@
 					<div class="company__two-left">
 						<div class="company__two-left-title">
 							<span class="subtitle-four">Why choose us</span>
-							<h2>Trust Us, Elevate Success.</h2>
-							<p>Choose us for our unwavering commitment to quality, reliability, and customer satisfaction. With our extensive experience, innovative solutions, and dedicated support, we strive to exceed your expectations and deliver exceptional results for your business.</p>
+							<h2>Trust Us, Advance to Success</h2>
+							<p>Choose us for our unwavering commitment to Quality, Reliability, and Customer Satisfaction. With our extensive Experience, innovative Solutions, and dedicated Support, we strive to exceed Expectations and Deliver exceptional Results for your business.</p>
 						</div>
-						<!--div class="company__two-left-skill">
-							<div class="company__two-left-skill-item">
-								<h2><span class="counter">89</span>k</h2>
-								<h6>Project Completed Last Years</h6>
-							</div>
-							<div class="company__two-left-skill-item">
-								<h2><span class="counter">87</span>k</h2>
-								<h6>happy customer worldwide</h6>
-							</div>
-						</div-->
+						
 					</div>
 				</div>
 				<div class="col-xl-6 col-lg-5">
 					<div class="company__two-right t-right">
 						<div class="image-overlay dark__image">							
-							<img class="img__full" src="{% static "assets/img/shape/about-image.png" %}" alt="about-image">
+							<img class="img__full" src="{% static "assets/img/shape/about-image.png" %}" alt="about-safastar-image">
 						</div>
 					</div>
 				</div>

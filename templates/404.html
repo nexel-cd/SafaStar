@@ -1,7 +1,23 @@
 {% extends "base/base.html" %}
 {% load static %}
+
+{% block head %}
+
+
+<title>404 Error - Page Not Found | Safa Star</title>
+<meta name="description" content="Oops! The page you are looking for could not be found. Safa Star regrets any inconvenience. Please navigate back to our homepage or use the navigation menu to find what you're looking for.">
+<meta name="keywords" content="404 error, page not found, Safa Star, website error, navigation, homepage">
+<meta name="author" content="Safa Star">
+<!-- Canonical Link -->
+<link rel="canonical" href="https://www.thesafastar.com/">
+
+<!-- Robots -->
+<meta name="robots" content="index,follow">
+
+{% endblock head %}
+
 {% block body %}
-{% include "base\navbar\navbar2.html" %}
+{% include "base/navbar/navbar2.html" %}
 
 	<!-- Page Banner Area Start -->
     <div class="page__banner">

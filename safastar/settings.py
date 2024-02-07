@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-!@t$(tc4h50+p3h@^2zv=idkqv11y!(^axx_b_!ux1a7ti+azz'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -44,8 +44,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ckeditor',
+    'seoapp',
+    
     
 ]
+
+MIGRATION_MODULES = {
+    'djangoseo': 'path.to.migrations',
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

@@ -1,7 +1,23 @@
 {% extends "base/base.html" %}
 {% load static %}
+{% block head %}
+    <meta name="description" content="Safa Star, your trusted source for quality oilfield and industrial equipment. Catering to Iraq, Syria, Russia, Belarus, Afghanistan, Central Asia, Iran, and China markets.">
+    <meta name="keywords" content="Oilfield supplies UAE, Industrial equipment provider, Oilfield solutions, Oilfield products, Industrial supplies UAE, Oilfield equipment supplier, Oilfield tools, Industrial machinery, Oilfield materials, Industrial products UAE, Oilfield technology, Industrial solutions provider, Oilfield machinery, Industrial tools UAE, Oilfield accessories, Industrial materials supplier, Oilfield parts, Industrial equipment distributor, Oilfield services, Industrial supplies distributor UAE, Oilfield components, Industrial machinery supplier, Oilfield machinery supplier UAE, Industrial equipment manufacturer, Oilfield equipment distributor, Industrial tools supplier UAE, Oilfield equipment manufacturer, Industrial products distributor UAE, Oilfield supplies distributor, Industrial materials distributor UAE">
+    <meta name="author" content="Safa Star">
+    
+    <!-- Title -->
+    <title>Trusted Oilfield and Industrial Supplies Provider in UAE | Safa Star</title>
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://www.thesafastar.com/">
+
+    <!-- Robots -->
+    <meta name="robots" content="index,follow">
+
+
+{% endblock head %}
 {% block body %}
-{% include "base\navbar\navbar1.html" %}
+{% include "base/navbar/navbar1.html" %}
 	
 	<!-- Banner Area Start -->
 	<div class="banner__three swiper banner-slider">
@@ -12,9 +28,9 @@
 					<div class="row">
 						<div class="col-xl-12">
 							<div class="banner__three-content">
-								<span data-animation="fadeInUp" data-delay=".3s">The Safa Star</span>
-								<h1 data-animation="fadeInUp" data-delay=".6s" style="color: black;">Innovate Empower Excel.</h1>
-								<p data-animation="fadeInUp" data-delay=".9s" style="color: black;">Leading the Industry with Quality Oils & Chemicals WorldWide.</p>
+								<span data-animation="fadeInUp" data-delay=".3s">SAFA STAR</span>
+								<h1 data-animation="fadeInUp" data-delay=".6s" style="color: black; font-size: 64px;">Knowledge Solutions Implement</h1>
+								<p data-animation="fadeInUp" data-delay=".9s" style="color: black;">Best Optimized solution provider for the Industries of Future.</p><br>
 								<div class="banner__three-content-button" data-animation="fadeInUp" data-delay="1.2s">
                                     <a class="btn-one" href={% url "allbrands" %}>Discover More</a>
                                 </div>
@@ -30,9 +46,9 @@
 					<div class="row">
 						<div class="col-xl-12">
 							<div class="banner__three-content">
-								<span data-animation="fadeInUp" data-delay=".3s">The Safa Star</span>
-								<h1 data-animation="fadeInUp" data-delay=".6s" style="color: black;">Innovate Empower Excel.</h1>
-								<p data-animation="fadeInUp" data-delay=".9s" style="color: black;">Leading the Industry with Quality Oils & Chemicals WorldWide.</p>
+								<span data-animation="fadeInUp" data-delay=".3s">SAFA STAR</span>
+								<h1 data-animation="fadeInUp" data-delay=".6s" style="color: black; font-size: 64px;">Innovate Empower Excel</h1>
+								<p data-animation="fadeInUp" data-delay=".9s" style="color: black;">Providing innovate efficient technology to meet the needs of the Sustainable tomorrow.</p>
 								<div class="banner__three-content-button" data-animation="fadeInUp" data-delay="1.2s">
                                     <a class="btn-one" href="{% url "allbrands" %}">Discover More</a>
                                 </div>
@@ -56,11 +72,11 @@
                         <img class="about__three-left-shape light-n" src="{% static "assets/img/shape/about-3-dark.png" %}" alt="about-image">
 						<div class="about__three-left-image">
                             <div class="image-overlay dark__image">
-                                <img src="{% static "assets\img\images\about-4.png" %}" alt="about-image">
+                                <img src="{% static "assets\img\images\about-4.png" %}" alt="about-us-safastar">
                             </div>
 							<div class="about__three-left-image-experience" data-background="{% static "assets/img/shape/experience.png" %}">
-								<h1><span class="counter">10</span>+</h1>
-								<h5>Years Of Experience</h5>
+								<h1><span class="counter">20</span>+</h1>
+								<h5>Decade Of Experience</h5>
                                 <p>Experience that delivers every time.</p>
 							</div>
 						</div>
@@ -69,9 +85,9 @@
 				<div class="col-xl-5 col-lg-6">
 					<div class="about__three-right">
 						<div class="about__three-right-title">
-							<span class="subtitle-three">Leading Provider</span>
+							<span class="subtitle-three">Solution Provider</span>
 							<h2>Your partner for Unrivaled Solutions</h2>
-                            <p>Leading Provider where innovation meets reliability - Elevating your Standards Everytime.</p>
+                            {% comment %} <p>Leading Provider where innovation meets reliability - Elevating your Standards Everytime.</p> {% endcomment %}
 						</div>
                         <div class="about__three-right-list">
                             <div class="about__three-right-list-item">
@@ -80,7 +96,7 @@
                                 </div>
                                 <div class="about__three-right-list-item-content">
                                     <h4>Our Company Mission</h4>
-                                    <p>We deliver superior products & unmateched service ensuiring safety, efficiency & sustainability globally</p>
+                                    <p>To decipher technical complexities and offer simple yet effective solutions supported by Superior Products and Excellent Services, ensuring High Safety Standards, Maximum Efficiency, and Complete Sustainability.</p>
                                 </div>
                             </div>
                             <div class="about__three-right-list-item">
@@ -89,7 +105,7 @@
                                 </div>
                                 <div class="about__three-right-list-item-content">
                                     <h4>Our Company Vision</h4>
-                                    <p>Safa Star envisions excellence & innovation shaping the future of the Industries</p>
+                                    <p>We aspire to provide Innovative Sustainable Solutions, shaping the Industries of future.</p>
                                 </div>
                             </div>
                         </div>
@@ -169,34 +185,34 @@
         </script>
         <div class="carousel ftco-animate">
           <div class="carousel-container">
-            <img src="https://i.ibb.co/T0h0Nmw/aaf.png">
-            <img src="https://i.ibb.co/P1sDL9M/caltex.png" alt="">
-            <img src="https://i.ibb.co/9tpgJ0v/castrol.png" alt="">
-            <img src="https://i.ibb.co/37wby3B/dewalt.png" alt="">
-            <img src="https://i.ibb.co/KmBJ938/donaldson.png" alt="">
-            <img src="https://i.ibb.co/MPDFqpN/ecolab.png" alt="">
-            <img src="https://i.ibb.co/mRdSpm8/eflochem.png" alt="">
-            <img src="https://i.ibb.co/QdVLCnp/makita.png" alt="">
-            <img src="https://i.ibb.co/dMLxJWk/midas.png" alt="">
-            <img src="https://i.ibb.co/N1yLWqR/mobil.png" alt="">
-            <img src="https://i.ibb.co/NmM639L/msa.png" alt="">
-            <img src="https://i.ibb.co/t4cqKfC/purolyt.png" alt="">
-            <img src="https://i.ibb.co/jDF1F5T/shell.png" alt="">
-            <img src="https://i.ibb.co/ZYKLGqF/stanly.png" alt="">
-            <img src="https://i.ibb.co/T0h0Nmw/aaf.png" alt="">
-            <img src="https://i.ibb.co/P1sDL9M/caltex.png" alt="">
-            <img src="https://i.ibb.co/9tpgJ0v/castrol.png" alt="">
-            <img src="https://i.ibb.co/37wby3B/dewalt.png" alt="">
-            <img src="https://i.ibb.co/KmBJ938/donaldson.png" alt="">
-            <img src="https://i.ibb.co/MPDFqpN/ecolab.png" alt="">
-            <img src="https://i.ibb.co/mRdSpm8/eflochem.png" alt="">
-            <img src="https://i.ibb.co/QdVLCnp/makita.png" alt="">
-            <img src="https://i.ibb.co/dMLxJWk/midas.png" alt="">
-            <img src="https://i.ibb.co/N1yLWqR/mobil.png" alt="">
-            <img src="https://i.ibb.co/NmM639L/msa.png" alt="">
-            <img src="https://i.ibb.co/t4cqKfC/purolyt.png" alt="">
-            <img src="https://i.ibb.co/jDF1F5T/shell.png" alt="">
-            <img src="https://i.ibb.co/ZYKLGqF/stanly.png" alt="">
+            <img src="https://i.ibb.co/T0h0Nmw/aaf.png" alt="aaf-brand-safastar">
+            <img src="https://i.ibb.co/P1sDL9M/caltex.png" alt="caltex-brand-safastar">
+            <img src="https://i.ibb.co/9tpgJ0v/castrol.png" alt="castrol-brand-safastar">
+            <img src="https://i.ibb.co/37wby3B/dewalt.png" alt="dewalt-brand-safastar">
+            <img src="https://i.ibb.co/KmBJ938/donaldson.png" alt="donaldson-brand-safastar">
+            <img src="https://i.ibb.co/MPDFqpN/ecolab.png" alt="ecolab-brand-safastar">
+            <img src="https://i.ibb.co/mRdSpm8/eflochem.png" alt="eflochem-brand-safastar">
+            <img src="https://i.ibb.co/QdVLCnp/makita.png" alt="makita-brand-safastar">
+            <img src="https://i.ibb.co/dMLxJWk/midas.png" alt="midas-brand-safastar">
+            <img src="https://i.ibb.co/N1yLWqR/mobil.png" alt="mobil-brand-safastar">
+            <img src="https://i.ibb.co/NmM639L/msa.png" alt="msa-brand-safastar">
+            <img src="https://i.ibb.co/t4cqKfC/purolyt.png" alt="purolyt-brand-safastar">
+            <img src="https://i.ibb.co/jDF1F5T/shell.png" alt="shell-brand-safastar">
+            <img src="https://i.ibb.co/ZYKLGqF/stanly.png" alt="stanly-brand-safastar">
+            <img src="https://i.ibb.co/T0h0Nmw/aaf.png" alt="aaf-brand-safastar">
+            <img src="https://i.ibb.co/P1sDL9M/caltex.png" alt="caltex-brand-safastar">
+            <img src="https://i.ibb.co/9tpgJ0v/castrol.png" alt="castrol-brand-safastar">
+            <img src="https://i.ibb.co/37wby3B/dewalt.png" alt="dewalt-brand-safastar">
+            <img src="https://i.ibb.co/KmBJ938/donaldson.png" alt="donaldson-brand-safastar">
+            <img src="https://i.ibb.co/MPDFqpN/ecolab.png" alt="ecolab-brand-safastar">
+            <img src="https://i.ibb.co/mRdSpm8/eflochem.png" alt="eflochem-brand-safastar">
+            <img src="https://i.ibb.co/QdVLCnp/makita.png" alt="makita-brand-safastar">
+            <img src="https://i.ibb.co/dMLxJWk/midas.png" alt="midas-brand-safastar">
+            <img src="https://i.ibb.co/N1yLWqR/mobil.png" alt="mobil-brand-safastar">
+            <img src="https://i.ibb.co/NmM639L/msa.png" alt="msa-brand-safastar">
+            <img src="https://i.ibb.co/t4cqKfC/purolyt.png" alt="purolyt-brand-safastar">
+            <img src="https://i.ibb.co/jDF1F5T/shell.png" alt="shell-brand-safastar">
+            <img src="https://i.ibb.co/ZYKLGqF/stanly.png" alt="stanly-brand-safastar">
           </div>
         </div>
       </section>
@@ -223,7 +239,7 @@
         <div class="portfolio">
             {% for product in productitem %}
             <div class="portfolio__three-item">
-                <img src="{{product.img.url}}" alt="car-insurance">
+                <img src="{{product.img.url}}" alt="product-safastar">
                 <div class="portfolio__three-item-content vertical">
                     <div>
                         <span>Premium Products</span>
@@ -244,69 +260,7 @@
                 </div>
             </div>
             {% endfor %}
-            {% comment %} <div class="portfolio__three-item">
-                <img src="{% static "assets/img/portfolio/industry-chemicals.png" %}" alt="flood-insurance">
-                <div class="portfolio__three-item-content vertical">
-                    <div>
-                        <span>Premium Products</span>
-                        <h4><a href="project-single.html">Industry Chemicals</a></h4>
-                    </div>
-                    <div class="portfolio__three-item-content-icon vertical">
-                        <a href="project-single.html"><i class="flaticon-right-up"></i></a>
-                    </div>
-                </div>
-                <div class="portfolio__three-item-content transition">
-                    <div>
-                        <span>Premium Products</span>
-                        <h4><a href="project-single.html">Industry Chemicals</a></h4>
-                    </div>
-                    <div class="portfolio__three-item-content-icon">
-                        <a href="project-single.html"><i class="flaticon-right-up"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="portfolio__three-item ">
-                <img src="{% static "assets/img/portfolio/safety-products.png" %}" alt="house-insurance">
-                <div class="portfolio__three-item-content vertical">
-                    <div>
-                        <span>Premium Products</span>
-                        <h4><a href="project-single.html">Safety Products</a></h4>
-                    </div>
-                    <div class="portfolio__three-item-content-icon vertical">
-                        <a href="project-single.html"><i class="flaticon-right-up"></i></a>
-                    </div>
-                </div>
-                <div class="portfolio__three-item-content transition">
-                    <div>
-                        <span>Premium Products</span>
-                        <h4><a href="project-single.html">Safety Products</a></h4>
-                    </div>
-                    <div class="portfolio__three-item-content-icon">
-                        <a href="project-single.html"><i class="flaticon-right-up"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="portfolio__three-item">
-                <img src="{% static "assets/img/portfolio/building-materials.png" %}" alt="homeowner-insurance">
-                <div class="portfolio__three-item-content vertical">
-                    <div>
-                        <span>Premium Products</span>
-                        <h4><a href="project-single.html">Building Materials</a></h4>
-                    </div>
-                    <div class="portfolio__three-item-content-icon vertical">
-                        <a href="project-single.html"><i class="flaticon-right-up"></i></a>
-                    </div>
-                </div>
-                <div class="portfolio__three-item-content transition">
-                    <div>
-                        <span>Premium Products</span>
-                        <h4><a href="project-single.html">Building Materials</a></h4>
-                    </div>
-                    <div class="portfolio__three-item-content-icon">
-                        <a href="project-single.html"><i class="flaticon-right-up"></i></a>
-                    </div>
-                </div>
-            </div> {% endcomment %}
+            
         </div>  
     </div>  
     <!-- Portfolio Area End -->
@@ -317,7 +271,7 @@
 			<div class="row align-items-center">
 				<div class="col-xl-6 col-lg-8 lg-mb-20">
 					<div class="cta__area-title lg-t-center">
-						<h2>Elevate your Industry Standards Today</h2>
+						<h2>Experience the advanced Procurement Solutions</h2>
 					</div>
 				</div>
 				<div class="col-xl-6 col-lg-4">
@@ -337,10 +291,10 @@
                     <div class="faq__one-left">
                         <div class="faq__one-left-image">
                             <div class="image-overlay">
-                                <img src="{% static "assets/img/pages/faq-1.png" %}" alt="faq-image">
+                                <img src="{% static "assets/img/pages/faq-1.png" %}" alt="faq-image-safastar">
                             </div>
                             <div class="image-overlay faq__one-left-image-one">
-                                <img src="{% static "assets/img/pages/faq-2.png" %}" alt="faq-image">
+                                <img src="{% static "assets/img/pages/faq-2.png" %}" alt="faq-image-safastar">
                             </div>
                             <div class="faq__one-left-image-question left-right-animate">
                                 <div class="faq__one-left-image-question-icon">
@@ -354,7 +308,7 @@
                 <div class="col-xxl-5 col-lg-6">
                     <div class="faq__one-right">
                         <div class="faq__one-right-title">
-                            <span class="subtitle-three">Faq Questions</span>
+                            <span class="subtitle-three">Frequently Asked Questions</span>
                             <h2>Answer's for Seamless Solutions</h2>
                         </div>
                         <div class="faq__area" id="accordionExample">
@@ -373,7 +327,7 @@
                             <div class="faq__area-item">
                                 <h6 class="icon collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree">What makes us unique ?</h6>
                                 <div id="collapseThree" class="faq__area-item-body collapse" data-bs-parent="#accordionExample">
-                                    <p>Our commitment to innovation, reliability, and customer satisfaction distinguishes us. We prioritize customer needs and foster long-term relationships built on trust and excellence.</p>
+                                    <p>Our commitment to innovation, reliability, and customer satisfaction distinguishes us. We prioritize to understand the customer needs and provide solutions to foster long-term relationships completely built on trust and excellence.</p>
                                 </div>
                             </div>
                         </div>                        
@@ -401,12 +355,12 @@
                     <div class="blog__three-item" data-background="{{blog.img1.url}}">
                         <div class="blog__three-item-meta">
                             <ul>
-                                <li><a href="#"><i class="far fa-calendar-alt"></i>{{blog.created_date.day}} {{blog.created_date|date:"F"}}</a></li>
+                                <li><a><i class="far fa-calendar-alt"></i>{{blog.created_date.day}} {{blog.created_date|date:"F"}}</a></li>
                             </ul>
                         </div>
                         <h4><a href="{% url "blogdetails" blog.slug %}">{{blog.title}}</a></h4>
                         <div class="blog__three-item-author">
-                            <img src="{% static "assets/img/images/avatar/avatar.png" %}" alt="avatar-image">
+                            <img src="{% static "assets/img/images/avatar/avatar.png" %}" alt="safastar-blog-user">
                             <h6>{{blog.author}}</h6>
                         </div>
                         <div class="blog__three-item-btn">

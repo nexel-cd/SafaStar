@@ -1,19 +1,38 @@
 {% extends "base/base.html" %}
 {% load static %}
+
+{% block head %}
+
+{% for brands in brands %} 
+<title>{{brands.brand}} Products | All in Stock | Safa Star</title>
+{% endfor %}
+<meta name="description" content="Discover a wide range of top brands available at Safa Star. From Mobil and Shell to Castrol and more, find high-quality products for your industrial needs.">
+<meta name="keywords" content="brands, Mobil, Shell, Castrol, Caltex, Donaldson, American Air Filter Company, Inc., Eflochem, Ecolab, Purolyt, Stanley, Dewalt, Makita, Midas, MSA, Safa Star">
+
+<meta name="author" content="Safa Star">
+<!-- Canonical Link -->
+<link rel="canonical" href="https://www.thesafastar.com/">
+
+<!-- Robots -->
+<meta name="robots" content="index,follow">
+
+{% endblock head %}
+
+
 {% block body %}
-{% include "base\navbar\navbar2.html" %}	
+{% include "base/navbar/navbar2.html" %}	
     
     
 
  {% for brands in brands %}  
     <!-- Page Banner Area Start -->
     <div class="page__banner">
-		<div class="page__banner-image" data-background="{% static "assets/img/banner/brands.png" %}"></div>
+		<div class="page__banner-image" data-background="{% static "assets/img/banner/brands-banner.png" %}"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-xl-12">
 					<div class="page__banner-content">
-						<h1>{{brands.brand}} Products In Dubai, UAE</h1>
+						<h1>{{brands.brand}} Products</h1>
 						<ul>
 							<li><a href="{% url "home" %}">Home</a><span>|</span></li>
 							<li style="color: white;">Brands</li>
@@ -31,16 +50,16 @@
 				<div class="col-xl-8 col-lg-8 lg-mb-50">
 					<div class="services__details-left">
 						<div class="services__details-left-image mb-30 dark__image">
-							<img class="img__full" src="{{brands.img1.url}}" alt="service-details-image">
+							<img class="img__full" src="{{brands.img1.url}}" alt="{{brands.slug}}-safastar">
 						</div>
 						<div class="services__details-left-content">
-							<h2>About {{brands.brand}} Products in Dubai, UAE</h2>
+							<h2>About {{brands.brand}} Products </h2>
                             <p> {{brands.des1|safe}} </p>
                             <span class="services__details-left-content-box">{{brands.quote|safe}}</span>
 							<p>{{brands.des2|safe}}</p>
                             <div class="row align-items-center mt-35 mb-35">
                                 <div class="col-xl-6 col-lg-12 xl-mb-30 dark__image">
-                                    <img class="img__full" src="{{brands.img2.url}}" alt="service-image">
+                                    <img class="img__full" src="{{brands.img2.url}}" alt="{{brands.slug}}-safastar">
                                 </div>
                                 <div class="col-xl-6 col-lg-12">
                                     <h3 class="mb-10">Customer Benefits</h3>
@@ -112,12 +131,12 @@
                             </div>
                         </div>
                         <div class="all__sidebar-item-help" data-background="{{adss.img.url}}">
-							<img class="all__sidebar-item-help-shape" src="{% static "assets/img/shape/support.png" %}" alt="">
-                            <h4>Request a Free Call in Today !</h4>
+							<img class="all__sidebar-item-help-shape" src="{% static "assets/img/shape/support.png" %}" alt="contactu-safastar">
+                            <h4>Get connected to our Engineers !</h4>
                             <div class="all__sidebar-item-help-contact">
                                 <i class="flaticon-phone-call"></i>
                                 <div class="all__sidebar-item-help-contact-content">
-                                    <span>Quick Help</span>
+                                    <span>Call Us</span>
                                     <h6><a href="tel:+125(895)658568">+125 (895) 658 568</a></h6>
                                 </div>
                             </div>

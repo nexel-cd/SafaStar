@@ -1,8 +1,25 @@
 
 {% extends "base/base.html" %}
 {% load static %}
+
+{% block head %}
+
+
+<title>Industry Updates | Latest News and Insights | Safa Star</title>
+<meta name="description" content="Stay informed with the latest industry updates, news, and insights on Safa Star's Updates page. Explore trends, developments, and innovations in the oilfield and industrial sectors.">
+<meta name="keywords" content="industry updates, latest news, industry insights, oilfield updates, industrial news, industry trends, industry developments, Safa Star">
+<meta name="author" content="Safa Star">
+<!-- Canonical Link -->
+<link rel="canonical" href="https://www.thesafastar.com/">
+
+<!-- Robots -->
+<meta name="robots" content="index,follow">
+
+{% endblock head %}
+
+
 {% block body %}
-{% include "base\navbar\navbar2.html" %}	
+{% include "base/navbar/navbar2.html" %}	
 <!-- Page Banner Area Start -->
 <div class="page__banner">
     <div class="page__banner-image" data-background="{% static "assets/img/banner/blog-baneer.png" %}"></div>
@@ -10,10 +27,10 @@
         <div class="row">
             <div class="col-xl-12">
                 <div class="page__banner-content">
-                    <h1>Blogs</h1>
+                    <h1>Updates</h1>
                     <ul>
                         <li><a href="/">Home</a><span>|</span></li>
-                        <li style="color: white;">All Blogs</li>
+                        <li style="color: white;">Industry Updates</li>
                     </ul>
                 </div>
             </div>
