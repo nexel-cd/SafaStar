@@ -32,7 +32,7 @@
                     <div class="col-xl-3 col-lg-3 col-6">
                         <div class="header__area-menubar-left">
                             <div class="header__area-menubar-left-logo three">
-                                <a href="/"><img src="{% static "assets\img\images\logo.png" %} " style="max-width: 200px;" alt="safastar-logo-image"></a>
+                                <a href="/"><img src="{% static "assets\img\images\logo.png" %} " style="min-width: 162px; padding: 25px  8px 12px;" alt="safastar-logo-image"></a>
                             </div>
                         </div>
                     </div>
@@ -44,7 +44,7 @@
                                 <li class="menu-item"><a href="{% url "allbrands" %}">Brands</a>
                                     
                                 </li>
-                                <li class="menu-item-has-children"><a href="">Products</a>
+                                <li class="menu-item-has-children"><a>Products</a>
                                     <ul class="sub-menu">
                                         {% for productitem in productitem %}
                                         <li><a href="{% url "productviews" productitem.slug %}">{{productitem.name}}</a></li>
